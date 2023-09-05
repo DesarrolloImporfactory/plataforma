@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- Styles -->
+    @livewireStyles
+</head>
+
+<body class="font-sans antialiased">
+    <x-banner />
+
+    <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        @livewire('navigation-menu')
+
+        <!-- Page Heading -->
+        @if (isset($header))
+            <header class="bg-white dark:bg-gray-800 shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
+        {{-- border-indigo-400 --}}
+        <!-- Page Content -->
+        <div class="container py-8">
+            <div class="grid grid-cols-5 gap-8">
+                <aside>
+                    <h1 class="font-bold text-lg mb-4 text-gray-300">Edicion del curso</h1>
+                    <ul class="text-sm text-gray-600">
+                        <li class="leading-7 mb-1 border-l-4 rounded {{request()->routeIs('instructor.cursos.admin.show') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent'}} pl-2"><a
+                                href="{{ route('instructor.cursos.admin.show', $curso) }}">informacion del
+                                curso</a></li>
+                        <li class="rounded leading-7 mb-1 border-l-4 {{request()->routeIs('instructor.cursos.curriculum') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent'}} pl-2"><a
+                                href="{{ route('instructor.cursos.curriculum', $curso) }}">lecciones del
+                                curos</a></li>
+                        <li class="rounded leading-7 mb-1 border-l-4 border-transparent pl-2"><a href="">metas del
+                                curso</a>
+                        </li>
+                        <li class="rounded leading-7 mb-1 border-l-4 border-transparent pl-2"><a href="">estudiantes</a>
+                        </li>
+                    </ul>
+                </aside>
+                <main class="col-span-4 card rounded">
+                    {{ $slot }}
+                </main>
+            </div>
+        </div>
+    </div>
+
+    @stack('modals')
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+    @livewireScripts
+    @stack('js')
+    <script>
+        Livewire.on('alert', message => {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: message,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
+        Livewire.on('error', message => {
+            Swal.fire(message)
+        })
+    </script>
+</body>
+
+</html>

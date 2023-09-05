@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -307,15 +307,28 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Dashboard',
+            'route'  => 'admin.dashboard.index',
+            'icon' => 'fas fa-fw fa-chart-line',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
+            'text' => 'Seting role',
+            'route'  => 'admin.roles.index',
+            'icon' => 'fas fa-fw fa-user-cog',
+            'can' => 'Admin roles',
+        ],
+        // [
+        //     'text' => 'blog',
+        //     'url'  => 'admin/blog',
+        //     'can'  => 'manage-blog',
+        //     'active' => ['admin/roles*']
+        // ],
+
+        [
+            'text'        => 'Usuarios',
+            'route'         => 'admin.usuarios.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'can' => 'Admin users',
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
@@ -537,5 +550,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-   
+
     public const HOME = '/';
 
-    
+
     public function boot()
     {
         $this->configureRateLimiting();
@@ -29,14 +29,14 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web', 'auth')
                 ->prefix('admin')
                 ->group(base_path('routes/admin.php'));
+
+            Route::middleware('web', 'auth')
+                ->name('instructor.')
+                ->prefix('instructor')
+                ->group(base_path('routes/instructor.php'));
         });
     }
 
-    /**
-     * Configure the rate limiters for the application.
-     *
-     * @return void
-     */
     protected function configureRateLimiting()
     {
         RateLimiter::for('api', function (Request $request) {

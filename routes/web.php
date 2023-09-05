@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
 
+
+
 Route::get('/cursos/index', CourseController::class)->name('cursos.index');
 
 Route::get('/cursos/show/{curso}', [CourseController::class, 'show'])->name('cursos.show');

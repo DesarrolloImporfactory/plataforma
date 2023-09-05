@@ -20,10 +20,10 @@ class Course extends Model
     const REVISION = 2;
     const PUBLICADO = 3;
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+    // public function getRouteKeyName()
+    // {
+    //     return 'slug';
+    // }
 
     public function user()
     {
