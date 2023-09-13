@@ -12,7 +12,7 @@ use Illuminate\Support\Str;
 
 class CourseFactory extends Factory
 {
-    
+
     public function definition()
     {
         $title = $this->faker->sentence();
@@ -21,9 +21,9 @@ class CourseFactory extends Factory
             'title' => $title,
             'subtitle' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
-            'status' => $this->faker->randomElement([Course::BORRADOR,Course::REVISION,Course::PUBLICADO]),
+            'status' => $this->faker->randomElement([Course::BORRADOR, Course::REVISION, Course::PUBLICADO]),
             'slug' => Str::slug($title),
-            'user_id' => User::all()->random()->id,
+            'user_id' => $this->faker->randomElement([1, 2, 3, 4, 5]),
             'level_id' => Level::all()->random()->id,
             'categorie_id' => Categorie::all()->random()->id,
             'price_id' => Price::all()->random()->id,

@@ -100,7 +100,7 @@
                                     class="text-gray-400 hover:text-gray-100  mx-2">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
-                                <a href="#" class="text-gray-400 hover:text-gray-100  ml-2">
+                                <a  wire:click="$emit('deleteCurso',{{ $curso->id }})" class="text-gray-400 hover:text-gray-100  ml-2 cursor-pointer">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </a>
                             </td>
@@ -116,4 +116,46 @@
             </div>
         @endif
     </x-table-responsive>
+    <style>
+        .table {
+            border-spacing: 0 15px;
+        }
+    
+        i {
+            font-size: 1rem !important;
+        }
+    
+        .table tr {
+            border-radius: 20px;
+        }
+    
+        tr td:nth-child(n+6),
+        tr th:nth-child(n+6) {
+            border-radius: 0 .625rem .625rem 0;
+        }
+    
+        tr td:nth-child(1),
+        tr th:nth-child(1) {
+            border-radius: .625rem 0 0 .625rem;
+        }
+    </style>
 </div>
+@push('js')
+    <script>
+        Livewire.on('deleteCurso', sectionId => {
+            Swal.fire({
+                title: 'Segur@ deseas eliminar el registro?',
+                text: "Puede tener registros asociados!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Elimina esto!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emitTo('intructor.intructor-cursos', 'delete', sectionId);
+                }
+            })
+        });
+    </script>
+@endpush

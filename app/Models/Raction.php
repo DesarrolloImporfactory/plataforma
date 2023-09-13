@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Raction extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
     const LIKE = 1;
     const DISLIKE = 2;

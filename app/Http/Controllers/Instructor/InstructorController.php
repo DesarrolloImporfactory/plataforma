@@ -19,7 +19,7 @@ class InstructorController extends Controller
 
     public function create()
     {
-        
+
         return view('home.instructor.create');
     }
 
@@ -32,9 +32,12 @@ class InstructorController extends Controller
 
     public function show($curso)
     {
-        
-        // $curso = Course::findOrFail($curso);
-        return view('home.instructor.show', compact('curso'));
+        $cursoQuery  = Course::find($curso);
+        if ($cursoQuery->user_id == auth()->user()->id) {
+            return view('home.instructor.show', compact('curso'));
+        } else {
+            abort(404);
+        }
     }
 
 

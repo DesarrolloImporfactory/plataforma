@@ -1,6 +1,9 @@
 <div>
     <div class="bg-white dark:bg-gray-800 shadow-xl py-4">
         <div class="container flex">
+            <div class="flex-1 mr-2">
+                @livewire('course.search-course')
+            </div>
             <button wire:click='resetFilters' class="bg-white shadow h-10 px-4 rounded-lg text-gray-700 mr-3"><i
                     class="fa-solid fa-bars text-xs mr-2"></i> Todos los cursos</button>
             <div x-data="{ open: false }" class="relative">
@@ -45,9 +48,10 @@
                     @endforeach
                 </div>
             </div>
+            
         </div>
     </div>
-    <div class=" container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 mt-6">
+    <div class=" container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-6 gap-y-8 mt-6">
         @foreach ($cursos as $curso)
             <x-course-index :curso="$curso" />
         @endforeach

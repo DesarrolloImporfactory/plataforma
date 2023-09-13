@@ -9,6 +9,8 @@ class Goal extends Model
 {
     use HasFactory;
 
+    protected $connection = 'cursos';
+
     protected $fillable = ['name','course_id'];
 
     public function course(){

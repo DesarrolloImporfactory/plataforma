@@ -331,16 +331,16 @@ return [
             'can' => 'Admin users',
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Gestión de cursos'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Cursos pendientes',
+            'route'  => 'admin.cursos',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Sistema cursos',
+            'route'  => 'admin.setings',
+            'icon' => 'fas fa-fw fa-gear',
         ],
         [
             'text'    => 'multilevel',

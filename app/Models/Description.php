@@ -9,6 +9,8 @@ class Description extends Model
 {
     use HasFactory;
 
+    protected $connection = 'cursos';
+
     protected $fillable = ['name','lesson_id'];
 
     public function lesson(){

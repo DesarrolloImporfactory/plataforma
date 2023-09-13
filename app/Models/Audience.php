@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Audience extends Model
 {
     use HasFactory;
-
+    protected $connection = 'cursos';
     protected $fillable = ['name','course_id'];
 
     public function course(){

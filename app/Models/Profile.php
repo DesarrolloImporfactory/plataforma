@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
 
     protected $fillable = ['title','biography','website','facebook','linkedin','youtube','user_id'];

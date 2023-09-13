@@ -9,6 +9,8 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $connection = 'cursos';
+
     protected $guarded = ['id'];
 
     //relacion polimorfica

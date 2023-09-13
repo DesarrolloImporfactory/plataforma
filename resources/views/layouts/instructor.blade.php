@@ -40,19 +40,42 @@
             <div class="grid grid-cols-5 gap-8">
                 <aside>
                     <h1 class="font-bold text-lg mb-4 text-gray-300">Edicion del curso</h1>
-                    <ul class="text-sm text-gray-600">
-                        <li class="leading-7 mb-1 border-l-4 rounded {{request()->routeIs('instructor.cursos.admin.show') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent'}} pl-2"><a
-                                href="{{ route('instructor.cursos.admin.show', $curso) }}">informacion del
-                                curso</a></li>
-                        <li class="rounded leading-7 mb-1 border-l-4 {{request()->routeIs('instructor.cursos.curriculum') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent'}} pl-2"><a
-                                href="{{ route('instructor.cursos.curriculum', $curso) }}">lecciones del
-                                curos</a></li>
-                        <li class="rounded leading-7 mb-1 border-l-4 border-transparent pl-2"><a href="">metas del
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li
+                            class="leading-7 mb-1 border-l-4 rounded {{ request()->routeIs('instructor.cursos.admin.show') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent' }} pl-2">
+                            <a href="{{ route('instructor.cursos.admin.show', $curso) }}">informacion del
                                 curso</a>
                         </li>
-                        <li class="rounded leading-7 mb-1 border-l-4 border-transparent pl-2"><a href="">estudiantes</a>
+                        <li
+                            class="rounded leading-7 mb-1 border-l-4 {{ request()->routeIs('instructor.cursos.curriculum') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent' }} pl-2">
+                            <a href="{{ route('instructor.cursos.curriculum', $curso) }}">lecciones del
+                                curos</a>
+                        </li>
+                        <li
+                            class="rounded leading-7 mb-1 border-l-4 {{ request()->routeIs('instructor.cursos.metas') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent' }}  pl-2">
+                            <a href="{{ route('instructor.cursos.metas', $curso) }}">metas del
+                                curso</a>
+                        </li>
+                        <li
+                            class="rounded leading-7 mb-1 border-l-4 {{ request()->routeIs('instructor.cursos.estudiantes') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent' }} pl-2">
+                            <a href="{{ route('instructor.cursos.estudiantes', $curso) }}">estudiantes</a>
+                        </li>
+
+                        <li
+                            class="rounded leading-7 mb-1 border-l-4 {{ request()->routeIs('instructor.cursos.observaciones') ? 'border-indigo-600  dark:bg-indigo-200' : 'border-transparent' }} pl-2">
+                            <a href="{{ route('instructor.cursos.observaciones', $curso) }}">Observaciones</a>
                         </li>
                     </ul>
+                    <form action="{{ route('instructor.cursos.estatus', $curso) }}" method="post">
+                        @csrf
+                        <x-danger-button type="submit">Solicitar revisión</x-danger-button>
+                    </form>
+                    @if (Session::has('message'))
+                        <script>
+                            Swal.fire('{{ Session::get('message') }}')
+                        </script>
+                    @endif
+
                 </aside>
                 <main class="col-span-4 card rounded">
                     {{ $slot }}

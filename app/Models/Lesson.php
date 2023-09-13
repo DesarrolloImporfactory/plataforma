@@ -9,6 +9,8 @@ class Lesson extends Model
 {
     use HasFactory;
 
+    protected $connection = 'cursos';
+
     protected $fillable = ['name', 'url', 'iframe', 'section_id', 'platform_id'];
 
     public function getCompletedAttribute(){

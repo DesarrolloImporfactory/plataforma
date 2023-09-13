@@ -16,11 +16,11 @@ class CreateCurso extends Component
 
     public $photo, $imagen;
     public $curso, $title, $subtitle, $slug, $description, $categorie_id, $price_id, $level_id;
-
+    // 'email' => 'required|string|min:2|max:50|unique:imporcomex.emails,email',
     protected $rules = [
         'title' => 'required',
         'subtitle' => 'required',
-        'slug' => 'required|unique:courses',
+        'slug' => 'required|unique:cursos.courses,slug',
         'description' => 'required',
         'categorie_id' => 'required',
         'price_id' => 'required',
@@ -54,9 +54,10 @@ class CreateCurso extends Component
                 'url' => $url
             ]);
 
-            $this->emit('alert','Registro creado con exito!');
+            $this->emit('alert', 'Registro creado con exito!');
+            return redirect()->route('instructor.cursos.admin.show', $curso->id);
         } catch (\Exception $e) {
-            $this->emit('error',$e->getMessage());
+            $this->emit('error', $e->getMessage());
         }
     }
     public function slugChange()

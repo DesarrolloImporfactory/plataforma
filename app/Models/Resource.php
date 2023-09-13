@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Resource extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
+    protected $fillable = ['url','resourceable_id',	'resourceable_type'];
 
     public function resourceable(){
         return $this->morphTo();

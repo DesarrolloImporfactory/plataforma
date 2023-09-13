@@ -9,6 +9,8 @@ class Image extends Model
 {
     use HasFactory;
 
+    protected $connection = 'cursos';
+
     protected $fillable = [
         'url', 
     ];

@@ -72,8 +72,9 @@
             </section>
             <h2 class="text-gray-800 dark:text-gray-200 text-2xl mt-6">Descripción del curso</h2>
             <section class="text-gray-700 dark:text-gray-400 text-base mt-4">
-                {{ $curso->description }}
+                {!! $curso->description !!}
             </section>
+            @livewire('course.course-reviews', ['curso' => $curso])
         </div>
         <div class="order-1 lg:order-2">
             <section class="card mt-8 rounded">

@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Requirement extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
 
     protected $fillable = ['name','course_id'];

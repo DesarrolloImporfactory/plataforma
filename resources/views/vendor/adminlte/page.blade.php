@@ -59,6 +59,12 @@
             $("#createModal").modal('hide');
             $("#editModal").modal('hide');
 
+            $("#createLevel").modal('hide');
+            $("#editLevel").modal('hide');
+
+            $("#createPrice").modal('hide');
+            $("#editPrice").modal('hide');
+
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',

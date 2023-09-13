@@ -23,7 +23,7 @@ class UpdateCurso extends Component
         return [
             'title' => 'required',
             'subtitle' => 'required',
-            'slug' => 'required|unique:courses,slug,' . $this->curso->id,
+            'slug' => 'required|unique:cursos.courses,slug,' . $this->curso->id,
             'description' => 'required',
             'categorie_id' => 'required',
             'price_id' => 'required',

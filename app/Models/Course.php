@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Course extends Model
 {
+    protected $connection = 'cursos';
+
     use HasFactory;
+
+
 
     protected $fillable = [
         'title', 'subtitle', 'description', 'status', 'slug', 'user_id',
@@ -50,6 +54,11 @@ class Course extends Model
     public function requirement()
     {
         return $this->hasMany(Requirement::class, 'course_id', 'id');
+    }
+
+    public function observation()
+    {
+        return $this->hasOne(Observation::class);
     }
 
     public function goal()
@@ -102,15 +111,17 @@ class Course extends Model
 
     //query scope 
 
-    public function scopeCategorie($query,$categorie_id){
+    public function scopeCategorie($query, $categorie_id)
+    {
         if ($categorie_id) {
-            return $query->where('categorie_id',$categorie_id);
+            return $query->where('categorie_id', $categorie_id);
         }
     }
 
-    public function scopeLevel($query,$level_id){
+    public function scopeLevel($query, $level_id)
+    {
         if ($level_id) {
-            return $query->where('level_id',$level_id);
+            return $query->where('level_id', $level_id);
         }
     }
 }

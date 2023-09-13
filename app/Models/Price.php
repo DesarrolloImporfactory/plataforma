@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Price extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
     public $timestamps = false;
-    protected $fillable = ['name'];
+    protected $fillable = ['name','value'];
 
     public function course(){
         return $this->hasMany(Course::class,'price_id','id');

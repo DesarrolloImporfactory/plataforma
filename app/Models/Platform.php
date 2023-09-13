@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Platform extends Model
 {
+    protected $connection = 'cursos';
+    
     use HasFactory;
     public $timestamps = false;
     protected $fillable = ['name'];

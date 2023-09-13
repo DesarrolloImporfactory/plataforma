@@ -10,6 +10,8 @@ class IntructorCursos extends Component
 {
     use WithPagination;
 
+    protected $listeners = ['delete'];
+
     public $search = '';
 
     public function render()
@@ -21,5 +23,15 @@ class IntructorCursos extends Component
     public function updatingSearch()
     {
         $this->resetPage();
+    }
+
+    public function delete(Int $id)
+    {
+        try {
+            Course::destroy($id);
+            $this->emit('alert', 'Curso eliminado con exito!.');
+        } catch (\Exception $e) {
+            $this->emit('alert', $e->getMessage());
+        }
     }
 }
