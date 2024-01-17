@@ -9,7 +9,7 @@ return new class extends Migration
 
     public function up()
     {
-        Schema::create('images', function (Blueprint $table) {
+        Schema::connection('cursos')->create('images', function (Blueprint $table) {
             $table->id();
             $table->string('url');
             //espesificamos que es una tabla polimorfica con el termino able y el tipo de dato
@@ -22,6 +22,6 @@ return new class extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('images');
+        Schema::connection('cursos')->dropIfExists('images');
     }
 };

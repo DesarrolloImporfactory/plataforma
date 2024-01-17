@@ -1,5 +1,5 @@
 <section>
-    <h1 class="text-2xl dark:text-gray-300 mt-4 font-bold">Valoraciones del curso</h1>
+    <h1 class="text-gray-800 dark:text-gray-200 text-2xl mt-6">Valoraciones del curso</h1>
     @can('matriculado', $curso)
         <article class="mt-4">
             @can('valued', $curso)
@@ -16,7 +16,7 @@
                         </li>
                         <li class="mr-1 cursor-pointer" wire:click="$set('rating',3)"><i
                                 class="fas fa-star {{ $rating >= 3 ? 'text-yellow-400' : 'text-gray-400' }}"></i>
-                        </li>''
+                        </li>
                         <li class="mr-1 cursor-pointer" wire:click="$set''('rating',4)"><i
                                 class="fas fa-star {{ $rating >= 4 ? 'text-yellow-400' : 'text-gray-400' }}"></i>
                         </li>

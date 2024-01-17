@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Course;
 use App\Models\Course;
 use App\Models\Lesson;
 use Livewire\Component;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class StatusCourse extends Component
@@ -12,6 +13,10 @@ class StatusCourse extends Component
     use AuthorizesRequests;
 
     public $curso, $current;
+    protected $listeners = ['change'];
+    private $changeCalled = false;
+    public $currentLesson;
+
 
     public function mount(Course $curso)
     {
@@ -27,7 +32,9 @@ class StatusCourse extends Component
             $this->current = $curso->lessons->last();
         }
 
-        $this->authorize('matriculado', $curso);
+        if (!$curso->students->contains(auth()->user()->id)) {
+            $curso->students()->attach(auth()->user()->id);
+        }
     }
 
     public function render()
@@ -38,7 +45,12 @@ class StatusCourse extends Component
     public function changeLesson(Lesson $lesson)
     {
         $this->current = $lesson;
+        // En tu componente de Livewire, cuando cambies de video, emite el evento
+        $this->emit('cambioDeVideo');
+
+        // $this->emit('cambiar',$this->current->iframe);
     }
+
 
     public function stateLesson()
     {
@@ -64,6 +76,17 @@ class StatusCourse extends Component
             return $this->curso->lessons[$this->index - 1];
         }
     }
+    public function change()
+    {
+
+        if (!$this->current->completed) {
+            $this->current->users()->attach(auth()->user()->id);
+        }
+
+        $this->current = Lesson::find($this->current->id);
+        $this->curso = Course::find($this->curso->id);
+        $this->emit('update','actualizar');
+    }
     public function getNextProperty()
     {
         if ($this->index == $this->curso->lessons->count() - 1) {
@@ -83,5 +106,15 @@ class StatusCourse extends Component
         }
         $advance = ($i * 100) / $this->curso->lessons->count();
         return round($advance, 2);
+    }
+
+    public function download()
+    {
+        try {
+            $this->emit('alert', 'Recurso descargado con exito!');
+            return response()->download(storage_path('app/public/' . $this->current->resource->url));
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
     }
 }

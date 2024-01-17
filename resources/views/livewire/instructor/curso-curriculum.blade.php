@@ -52,7 +52,7 @@
     </div>
 
     <div class="px-6 py-4 text-gray-600">
-        <h1 class="text-2xl font-bold text-white"><i class="fa-solid fa-circle-info mr-2"></i>LECCIONES DEL CURSO</h1>
+        <h1 class="text-2xl font-bold dark:text-white"><i class="fa-solid fa-circle-info mr-2"></i>LECCIONES DEL CURSO</h1>
         <hr class="mt-2 mb-6">
         @foreach ($curso->section as $item)
             <article x-data="{ open: true }" class="bg-white dark:bg-gray-900 overflow-hidden shadow-lg rounded mb-6">
@@ -75,7 +75,7 @@
                             </div>
                         </header>
                         <div x-show="open">
-                            @livewire('instructor.curso-leccion', ['section' => $item], key($item->id))
+                            @livewire('instructor.curso-leccion', ['section' => $item], key('section'.$item->id))
                         </div>
                     @endif
                 </div>

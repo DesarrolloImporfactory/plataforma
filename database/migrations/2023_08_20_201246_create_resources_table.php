@@ -9,7 +9,7 @@ return new class extends Migration
     
     public function up()
     {
-        Schema::create('resources', function (Blueprint $table) {
+        Schema::connection('cursos')->create('resources', function (Blueprint $table) {
             $table->id();
             $table->string('url');
 
@@ -23,6 +23,6 @@ return new class extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('resources');
+        Schema::connection('cursos')->dropIfExists('resources');
     }
 };

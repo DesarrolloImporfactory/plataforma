@@ -1,29 +1,43 @@
 <div class="py-10">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Course') }}
+            {{ 'CURSO: ' . $curso->title }}
         </h2>
     </x-slot>
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class=" lg:col-span-2">
-            <div class="embed-responsive">
+            <div class="embed-responsive" data-iframe-container>
                 {!! $current->iframe !!}
             </div>
             <section class="mt-6">
-                <h1 class="font-bold text-gray-700  text-xl dark:text-gray-200">{{ $current->name }}</h1>
+                <div class="flex justify-between items-center mb-2">
+                    <h1 class="font-bold text-gray-700  text-xl dark:text-gray-200">{{ $current->name }}</h1>
+
+                    @if ($current->resource)
+                        <p class="text-blue-500 text-base cursor-pointer" wire:click='download'><i
+                                class="fa-solid fa-cloud-arrow-down mr-2 text-gray-700 text-xl"></i>Descargar recurso
+                        </p>
+                    @endif
+                </div>
                 <div class="card rounded">
                     <div class="text-gray-400 text-base py-2 px-4">
-                        {{ $current->description->name }}
+                        @if ($current->description)
+                            {{ $current->description->name }}
+                        @else
+                            Pendiente
+                        @endif
+
                     </div>
                 </div>
             </section>
+
             <div class="mt-4 flex items-center cursor-pointer" wire:click='stateLesson'>
                 @if ($current->completed)
                     <i class="fa-solid fa-toggle-on text-blue-700  dark:text-blue-400 mr-3 text-2xl"></i>
                 @else
                     <i class="fa-solid fa-toggle-off text-blue-700  dark:text-blue-400 mr-3 text-2xl"></i>
                 @endif
-                <p class="text-gray-700  text-lg dark:text-gray-200">Marcar esta clase como terminada 
+                <p class="text-gray-700  text-lg dark:text-gray-200">Marcar esta clase como terminada
                 </p>
             </div>
             <section class="card rounded mt-6">
@@ -36,7 +50,8 @@
                             <p>Tema de inicio</p>
                         @endif
                         @if ($this->next)
-                            <a wire:click='changeLesson({{ $this->next }})' class="cursor-pointer ml-auto">Siguiente
+                            <a wire:click='changeLesson({{ $this->next }})'
+                                class="cursor-pointer ml-auto next">Siguiente
                                 tema<i class="fa-solid fa-angles-right ml-2"></i></a>
                         @else
                             <a class="cursor-pointer ml-auto">Fin de curso</a>
@@ -44,35 +59,59 @@
                     </div>
                 </div>
             </section>
+            @if (count($current->enlaces) > 0)
+                <section class="mt-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h1 class="font-bold text-gray-700  text-xl dark:text-gray-200">Enlaces</h1>
+                    </div>
+                    <div class="card rounded">
+                        <div class="text-gray-400 text-base py-2 px-4">
+
+                            <ul class="">
+                                @foreach ($current->enlaces as $enlace)
+                                    <li class="text-gray-400 text-base">
+                                        <p>{{ $enlace->name }}: <a class="cursor-pointer text-blue-500"
+                                                href="{{ $enlace->url }}">{{ $enlace->url }} </a> </p>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            @endif
         </div>
         <div class="card rounded">
-
             <div class="px-6 py-4">
                 <h1 class="card-title leading-8 text-center text-2xl">{{ $curso->title }}</h1>
                 <div class="flex items-center mt-4 mb-4">
                     <img class="h-13 w-13 object-cover rounded-full shadow-lg"
                         src="{{ $curso->teacher->profile_photo_url }}" alt="{{ $curso->teacher->name }}">
                     <div class="ml-4">
-                        <h1 class="font-bold text-gray-700 text-sm text-lg dark:text-gray-200">Prof.
+                        <h1 class="font-bold text-gray-700 text-sm dark:text-gray-200">Prof.
                             {{ $curso->teacher->name }}</h1>
                         <a class="text-blue-400 text-sm font-bold">{{ '@' . Str::slug($curso->teacher->name, '') }}</a>
                     </div>
                 </div>
-                <p class="text-gray-700 text-sm  dark:text-gray-200">{{$this->advance.'%'}} Completado</p>
+                <p class="text-gray-700 text-sm  dark:text-gray-200">{{ $this->advance . '%' }} Completado</p>
                 <div class="relative pt-1">
                     <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-red-200">
-                        <div style="width:{{$this->advance.'%'}}"
+                        <div style="width:{{ $this->advance . '%' }}"
                             class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500 transition-all duration-500">
                         </div>
                     </div>
                 </div>
                 <ul>
                     @foreach ($curso->section as $section)
-                        <li class="mb-4">
-                            <a class="text-gray-200 font-bold inline-block mb-2">{{ $section->name }}</a>
+                        <li class="mb-4" @if ($loop->first) x-data="{open : true}"
+                            @else
+                            x-data="{open : false}" @endif>
+                            <div class="flex justify-between cursor-pointer" x-on:click="open = !open">
+                                <a class="text-gray-200 font-bold inline-block mb-2">{{ $section->name }}</a>
+                                <i :class="{'fa-solid fa-angle-down text-white': !open, 'fa-solid fa-angle-up text-white': open}"></i>
+                            </div>
                             <ul>
                                 @foreach ($section->lesson as $lesson)
-                                    <li class="flex mb-1">
+                                    <li class="flex mb-1" x-show="open">
                                         <div>
                                             @if ($lesson->completed)
                                                 @if ($current->id == $lesson->id)
@@ -104,3 +143,20 @@
         </div>
     </div>
 </div>
+@push('js')
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script>
+        document.addEventListener('livewire:load', function() {
+            var iframeContainer = document.querySelector('[data-iframe-container]');
+            var player = new Vimeo.Player(iframeContainer);
+
+            player.on('ended', function() {
+                Livewire.emit('change');
+            });
+        });
+        Livewire.on('update', data => {
+            window.location.reload();
+        })
+    </script>
+@endpush

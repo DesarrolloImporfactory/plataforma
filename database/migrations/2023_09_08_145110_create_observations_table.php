@@ -9,7 +9,7 @@ return new class extends Migration
    
     public function up()
     {
-        Schema::create('observations', function (Blueprint $table) {
+        Schema::connection('cursos')->create('observations', function (Blueprint $table) {
             $table->id();
             $table->text('body');
             $table->unsignedBigInteger('course_id');
@@ -22,6 +22,6 @@ return new class extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('observations');
+        Schema::connection('cursos')->dropIfExists('observations');
     }
 };

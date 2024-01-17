@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
-    'logo_img_xl' => null,
+    'logo' => '',
+    'logo_img' => 'https://adminlte.io/docs/3.0/assets/img/logo-xl.png',
+    'logo_img_class' => 'brand-image-xs',
+    'logo_img_xl' => 'https://adminlte.io/docs/3.0/assets/img/logo-xl.png',
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
+    'logo_img_alt' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -107,12 +107,12 @@ return [
     */
 
     'preloader' => [
-        'enabled' => true,
+        'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'img/home/preloader.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 60,
+            'width' => 100,
             'height' => 60,
         ],
     ],
@@ -130,7 +130,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -306,10 +306,12 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+        ['header' => 'Administrador'],
         [
             'text' => 'Dashboard',
             'route'  => 'admin.dashboard.index',
             'icon' => 'fas fa-fw fa-chart-line',
+            'can' => 'Admin roles',
         ],
         [
             'text' => 'Seting role',
@@ -323,24 +325,42 @@ return [
         //     'can'  => 'manage-blog',
         //     'active' => ['admin/roles*']
         // ],
-
+        ['header' => 'Usuarios del curso'],
         [
-            'text'        => 'Usuarios',
-            'route'         => 'admin.usuarios.index',
+            'text'        => 'Alumnos',
+            'route'         => 'admin.usuarios.all',
             'icon'        => 'fas fa-fw fa-users',
             'can' => 'Admin users',
+            'label_color' => 'success',
+            'active' => ['admin/usuarios/*']
+        ],
+        [
+            'text'        => 'Alumnos',
+            'route'         => 'admin.alumnos.all',
+            'icon'        => 'fas fa-fw fa-users',
+            'label_color' => 'success',
+            'can' => 'Gestionar alumnos',
+            'active' => ['admin/usuarios/*']
+        ],
+        [
+            'text'        => 'Vendedores',
+            'route'         => 'admin.vendedores.all',
+            'icon'        => 'fas fa-fw fa-users',
+            'can' => 'Admin vendedores',
             'label_color' => 'success',
         ],
         ['header' => 'Gestión de cursos'],
         [
             'text' => 'Cursos pendientes',
             'route'  => 'admin.cursos',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-school',
+            'can' => 'Admin cursos',
         ],
         [
             'text' => 'Sistema cursos',
             'route'  => 'admin.setings',
             'icon' => 'fas fa-fw fa-gear',
+            'can' => 'Admin cursos',
         ],
         [
             'text'    => 'multilevel',

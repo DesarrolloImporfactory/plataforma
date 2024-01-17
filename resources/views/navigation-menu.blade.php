@@ -1,14 +1,19 @@
 @php
     $nav_links = [
+        // [
+        //     'name' => 'Home',
+        //     'route' => route('home'),
+        //     'active' => request()->routeIs('home'),
+        // ],
         [
-            'name' => 'Home',
-            'route' => route('home'),
-            'active' => request()->routeIs('home'),
-        ],
-        [
-            'name' => 'Course',
+            'name' => 'Cursos',
             'route' => route('cursos.index'),
             'active' => request()->routeIs('cursos.*'),
+        ],
+        [
+            'name' => 'Herramientas',
+            'route' => url('http://194.163.183.231:8085/home'),
+            'active' => '',
         ],
     ];
 @endphp
@@ -132,11 +137,17 @@
                                     </x-dropdown-link>
                                 @endcan
 
+                                @can('Dashboard vendedor')
+                                    <x-dropdown-link href="{{ route('vendedor') }}">
+                                        {{ __('Vendedor') }}
+                                    </x-dropdown-link>
+                                @endcan
+
                                 @can('Admin sistem')
-                                <x-dropdown-link href="{{ route('admin.dashboard.index') }}">
-                                    {{ __('Dashboard') }}
-                                </x-dropdown-link>
-                            @endcan
+                                    <x-dropdown-link href="{{ route('admin.dashboard.index') }}">
+                                        {{ __('Dashboard') }}
+                                    </x-dropdown-link>
+                                @endcan
 
                                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                     <x-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -223,7 +234,11 @@
                             {{ __('Instructor') }}
                         </x-responsive-nav-link>
                     @endcan
-
+                    @can('Dashboard vendedor')
+                        <x-responsive-nav-link href="{{ route('vendedor') }}" :active="request()->routeIs('vendedor')">
+                            {{ __('Vendedor') }}
+                        </x-responsive-nav-link>
+                    @endcan
                     @can('Admin sistem')
                         <x-responsive-nav-link href="{{ route('admin.dashboard.index') }}" :active="request()->routeIs('admin.dashboard.index')">
                             {{ __('Dashboard') }}

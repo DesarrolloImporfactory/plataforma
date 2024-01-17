@@ -51,4 +51,8 @@ class Lesson extends Model
     {
         return $this->morphMany(Raction::class, 'ractionable');
     }
+
+    public function enlaces(){
+        return $this->hasMany(Enlace::class,'lesson_id','id');
+    }
 }

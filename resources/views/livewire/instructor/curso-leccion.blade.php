@@ -51,6 +51,9 @@
                         <div class="my-2">
                             @livewire('instructor.lesson-resources', ['lesson' => $item], key('lesson-resources'.$item->id))
                         </div>
+                        <div class="my-2">
+                            @livewire('instructor.description-lesson', ['lesson' => $item], key('lesson-enlaces'.$item->id))
+                        </div>
                     </div>
                 @endif
             </div>

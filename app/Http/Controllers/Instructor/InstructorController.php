@@ -34,7 +34,7 @@ class InstructorController extends Controller
     {
         $cursoQuery  = Course::find($curso);
         if ($cursoQuery->user_id == auth()->user()->id) {
-            return view('home.instructor.show', compact('curso'));
+            return view('home.instructor.show', compact('curso','cursoQuery'));
         } else {
             abort(404);
         }

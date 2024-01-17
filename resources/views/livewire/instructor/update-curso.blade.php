@@ -42,7 +42,7 @@
             @default
         @endswitch
     </div>
-    <h1 class="text-2xl font-bold text-white"><i class="fa-solid fa-circle-info mr-2"></i>INFORMACIÓN DEL CURSO</h1>
+    <h1 class="text-2xl font-bold dark:text-white"><i class="fa-solid fa-circle-info mr-2"></i>INFORMACIÓN DEL CURSO</h1>
     <hr class="mt-2 mb-6">
     
     <form wire:submit.prevent='update'>
@@ -156,7 +156,6 @@
     <script>
         ClassicEditor
             .create(document.querySelector('#description'), {
-                toolbar: ['heading', '|', 'bold', 'italic', 'link', 'blockQuote'],
                 heading: {
                     options: [{
                             model: 'paragraph',

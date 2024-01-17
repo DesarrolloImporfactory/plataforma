@@ -2,10 +2,14 @@
 
 namespace App\Http\Livewire\Users;
 
+use App\Models\Perfil;
+use App\Models\Suscription;
 use App\Models\User;
+use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
+use GuzzleHttp\Client;
 
 class AdminUsers extends Component
 {
@@ -19,10 +23,13 @@ class AdminUsers extends Component
     public function render()
     {
         $roles = Role::get();
+
         $usuarios = User::where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
-            ->paginate(10);
+            ->whereHas("roles", function ($q) {
+                $q->where("name", "Alumno");
+            })->paginate(10);
         return view('livewire.users.admin-users', compact('usuarios', 'roles'))->extends('adminlte::page');
     }
 
@@ -64,7 +71,7 @@ class AdminUsers extends Component
             $usuario = User::create([
                 'name' => $this->name,
                 'email' => $this->email,
-                'password' => bcrypt($this->password)
+                'password' => md5($this->password)
             ])->assignRole($this->rol);
             $this->emit('alert', 'Registro creado exitosamente!');
             $this->emitTo('user.table-users', 'render');
@@ -87,7 +94,7 @@ class AdminUsers extends Component
         if ($this->password == $data->password) {
             $password = $data->password;
         } else {
-            $password = bcrypt($this->password);
+            $password = md5($this->password);
         }
         User::where('id', $this->idUser)->update([
             'name' => $this->name,
@@ -128,5 +135,38 @@ class AdminUsers extends Component
         } else {
             return redirect()->to('admin/users');
         }
+    }
+
+    public function suscripcion()
+    {
+        // $users = User::where('id', '>', '11067')->get();
+        // foreach ($users as $user) {
+        //     $suscripciones = Perfil::where('name_id', $user->perfil_id)->get();
+
+        //     foreach ($suscripciones as $suscripcion) {
+        //         Suscription::create([
+        //             'usuario_id' => $user->id,
+        //             'sistema_id' => $suscripcion->sistema_id,
+        //             'estado' => $suscripcion->estado,
+        //             'fecha_fin' => $suscripcion->fecha_fin,
+        //             'dias' =>  $suscripcion->dias
+        //         ]);
+        //     }
+        // }
+        $response = Http::withHeaders([
+            'wolkvox-token' => '7b69645f6469737472697d2d3230323331303330313530313435',
+            'Content-Type' => 'application/json',
+        ])->post('https://wv0100.wolkvox.com/api/v2/whatsapp.php?api=send_template_official', [
+            "connector_id" => "1947",
+            "telephone" => "593963607750",
+            "template_name" => "comprobacion",
+            "template_vars" => "hola;hola;hola;hola",
+            "customer_id" => "",
+            "url_attach" => "",
+        ]);
+
+        // Obtener la respuesta
+        $responseBody = $response->body();
+        $this->emit('enviar-mensaje', $responseBody);
     }
 }

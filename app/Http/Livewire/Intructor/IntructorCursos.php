@@ -16,7 +16,7 @@ class IntructorCursos extends Component
 
     public function render()
     {
-        $cursos = Course::where('title', 'like', '%' . $this->search . '%')->latest('id')->paginate(5);
+        $cursos = Course::where('title', 'like', '%' . $this->search . '%')->where('user_id',auth()->user()->id)->latest('id')->paginate(5);
         return view('livewire.intructor.intructor-cursos', compact('cursos'));
     }
 

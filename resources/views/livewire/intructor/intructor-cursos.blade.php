@@ -21,8 +21,8 @@
         </div>
 
         @if ($cursos->count())
-            <table class="w-full table text-gray-400 border-separate space-y-6 text-sm">
-                <thead class="bg-gray-800 text-white ">
+            <table class="w-full table dark:text-gray-400 border-separate space-y-6 text-sm">
+                <thead class="dark:bg-gray-800 bg-gray-200 dark:text-white ">
                     <tr>
                         <th class="p-3">NOMBRE</th>
                         <th class="p-3 text-left">MATRICULADOS</th>
@@ -34,7 +34,7 @@
                 </thead>
                 <tbody>
                     @foreach ($cursos as $curso)
-                        <tr class="bg-gray-800">
+                        <tr class="dark:bg-gray-800 bg-gray-200">
                             <td class="p-3">
                                 <div class="flex align-items-center">
                                     @isset($curso->image)

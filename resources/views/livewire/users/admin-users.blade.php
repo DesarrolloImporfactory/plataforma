@@ -1,6 +1,11 @@
 <div>
-    @section('title', 'Usuarios')
-    @include('admin.user.edit')
+    @section('title', 'Alumnos')
+    {{-- @include('admin.user.edit') --}}
+    @if (session('mensaje'))
+        <div class="alert alert-success mt-4">
+            {{ session('mensaje') }}
+        </div>
+    @endif
     <div class="content-header">
         <div class="card">
             <div class="card-header">
@@ -16,7 +21,11 @@
                             </div>
                         </div>
                         <div class="col-4 col-md-4 col-lg-4 mt-2">
-                            @include('admin.user.create')
+                            {{-- <button wire:click='suscripcion' class="btn btn-light">masivo</button> --}}
+                            <a href="{{ route('admin.usuarios.crear') }}" class="btn btn-primary">Crear alumno</a>
+                        </div>
+                        <div wire:loading wire:target='suscripcion'>
+                            loading-.....
                         </div>
                     </div>
                     <div class="row">
@@ -60,7 +69,7 @@
                                             </th>
                                             <th>SESSION</th>
                                             <th>ROL</th>
-                                            <th>ENLACE</th>
+                                            <th>PERFIL</th>
                                             <th>OPTION</th>
                                         </tr>
                                     </thead>
@@ -83,7 +92,7 @@
                                                             @endforeach
                                                         @endif
                                                     </td>
-                                                    <td>{{ $item->url ?? 'Pendiente' }}</td>
+                                                    <td>{{ $item->perfil_id ?? 'Pendiente' }}</td>
                                                     <td>
                                                         <a class="" href="#" role="button"
                                                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -92,10 +101,10 @@
                                                         <ul class="dropdown-menu">
                                                             <li>
                                                                 <a class="dropdown-item "
-                                                                    wire:click="editUser({{ $item->id }})"
-                                                                    type="button" data-bs-toggle="modal"
-                                                                    data-bs-target="#editModal"><i
-                                                                        class="fa-solid fa-pen-to-square "></i> Editar</a>
+                                                                    href="{{ route('admin.usuarios.show', $item->id) }}"
+                                                                    type="button"><i
+                                                                        class="fa-solid fa-pen-to-square "></i>
+                                                                    Editar</a>
                                                             </li>
                                                             <li>
                                                                 <a class="dropdown-item "
@@ -103,7 +112,7 @@
                                                                     type="button"><i class="fa-solid fa-trash"></i>
                                                                     Eliminar</a>
                                                             </li>
-    
+
                                                         </ul>
                                                     </td>
                                                 </tr>
@@ -133,11 +142,15 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 
 @push('js')
     <script>
+        Livewire.on('enviar-mensaje', userId => {
+            console.log(userId);
+
+        });
         Livewire.on('deleteUser', userId => {
             Swal.fire({
                 title: 'Estas segur@?',

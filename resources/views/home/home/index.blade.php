@@ -66,8 +66,8 @@
     </section>
 
     <section class=" bg-white dark:bg-gray-800 overflow-hidden shadow-xl py-12">
-        <h1 class="text-white text-center text-3xl">¿No sabes que curso llevar?</h1>
-        <p class="text-white text-center mt-8">Dirigete al catalogo de cursos y filtralos por categoria o nivel.</p>
+        <h1 class="text-gray-500 dark:text-white text-center text-3xl">¿No sabes que curso llevar?</h1>
+        <p class="text-gray-500 dark:text-white text-center mt-8">Dirigete al catalogo de cursos y filtralos por categoria o nivel.</p>
         <div class="flex justify-center mt-6">
             <a href="{{ route('cursos.index') }}" class="btn btn-danger">
                 Catalogo de cursos
@@ -76,7 +76,7 @@
     </section>
 
     <section class="py-6">
-        <h1 class="text-gray-300 text-center text-3xl">ULTIMOS CURSOS</h1>
+        <h1 class="text-gray-500 dar:text-gray-300 text-center text-3xl">ULTIMOS CURSOS</h1>
         <p class="text-center text-gray-500 text-sm mb-6 mt-6">Trabajando duro para seguir subiendo cursos
             constantemente.</p>
         <div class="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 mt-6">

@@ -10,6 +10,7 @@ use Livewire\Component;
 class CursoLeccion extends Component
 {
     public $section, $lesson, $platform, $name, $url, $platform_id=1;
+    public $open = false;
     protected $listeners=['delete'];
 
     protected $rules = [
@@ -57,27 +58,31 @@ class CursoLeccion extends Component
 
     public function create()
     {
-        $rules = [
-            'name' => 'required',
-            'platform_id' => 'required',
-            'url' => [
-                'required', 'regex:/^(https?:\/\/)?(www\.)?youtu\.be\/[A-Za-z0-9_-]+(\?[A-Za-z0-9_-]+=.*)?$/'
-            ]
-        ];
-        if ($this->platform_id == 2) {
-            $rules['url'] = ['required', 'regex:/\/\/(www\.)?vimeo.com\/(\d+)($|\/)/'];
+        try {
+            $rules = [
+                'name' => 'required',
+                'platform_id' => 'required',
+                'url' => [
+                    'required', 'regex:/^(https?:\/\/)?(www\.)?youtu\.be\/[A-Za-z0-9_-]+(\?[A-Za-z0-9_-]+=.*)?$/'
+                ]
+            ];
+            if ($this->platform_id == 2) {
+                $rules['url'] = ['required', 'regex:/\/\/(www\.)?vimeo.com\/(\d+)($|\/)/'];
+            }
+            $this->validate($rules);
+    
+            Lesson::create([
+                'name' => $this->name,
+                'platform_id' => $this->platform_id,
+                'url' => $this->url,
+                'section_id' => $this->section->id
+            ]);
+            $this->reset(['name','platform_id','url','url']);
+            $this->section = Section::find($this->section->id);
+            $this->emit('alert', 'Lección creada con exito!');
+        } catch (\Exception $e) {
+            dd($e->getMessage());
         }
-        $this->validate($rules);
-
-        Lesson::create([
-            'name' => $this->name,
-            'platform_id' => $this->platform_id,
-            'url' => $this->url,
-            'section_id' => $this->section->id
-        ]);
-        $this->reset(['name','platform_id','url','url']);
-        $this->section = Section::find($this->section->id);
-        $this->emit('alert', 'Lección creada con exito!');
     }
 
     public function delete($lesson){

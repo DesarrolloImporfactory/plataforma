@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Observation;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -25,10 +26,12 @@ class CourseController extends Controller
             return $e;
         }
     }
-
     public function matricular(Course $curso)
     {
-        $curso->students()->attach(auth()->user()->id);
+        if (!$curso->students->contains(auth()->user()->id)) {
+            $curso->students()->attach(auth()->user()->id);
+        }
+
         return redirect()->route('cursos.view', $curso);
     }
 
@@ -43,8 +46,9 @@ class CourseController extends Controller
         if ($curso->status == 1) {
             $curso->status = 2;
             $curso->save();
-            $curso->observation->delete();
-            return redirect()->route('instructor.cursos.admin',$curso)->with('message', 'El curso se ha enviado para revisión exitosamente.');
+            Observation::where('course_id', $curso->id)->delete();
+            // $curso->observation->delete();
+            return redirect()->route('instructor.cursos.admin', $curso)->with('message', 'El curso se ha enviado para revisión exitosamente.');
         } else {
             return back()->with('message', 'El curso ya se encuentra en el estado deseado.');
         }

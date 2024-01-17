@@ -46,7 +46,7 @@
         @endswitch
     </div>
     <div class="px-6 py-4 text-gray-600">
-        <h1 class="text-2xl font-bold text-white"><i class="fa-solid fa-circle-info mr-2"></i>ESTUDIANTES DEL CURSO</h1>
+        <h1 class="text-2xl font-bold dark:text-white"><i class="fa-solid fa-circle-info mr-2"></i>ESTUDIANTES DEL CURSO</h1>
         <hr class="mt-2 mb-6">
 
         <x-table-responsive>

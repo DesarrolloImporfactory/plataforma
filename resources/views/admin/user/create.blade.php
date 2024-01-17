@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary float-right btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">
-    Crear Usuario
+    Crear vendedor
 </button>
 
 <!-- Modal -->
@@ -9,7 +9,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Crear nuevo usuario</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Crear nuevo vendedor</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form wire:submit.prevent='createUser'>
@@ -34,15 +34,6 @@
                         @error('password')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
-                    </div>
-                    <div class="form-group">
-                        <p>Asignar rol:</p>
-                        <x-adminlte-select2 class="form-select" name="rol" id="rol" wire:model="rol">
-                            <option value="">Seleccione una opcion.....</option>
-                            @foreach ($roles as $item)
-                                <option value="{{ $item->id }}">{{ $item->name }}</option>
-                            @endforeach
-                        </x-adminlte-select2>
                     </div>
                 </div>
                 <div class="modal-footer">

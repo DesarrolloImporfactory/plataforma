@@ -15,6 +15,7 @@ class LessonDescription extends Component
     protected $listeners = ['delete'];
     public function mount(Lesson $lesson)
     {
+        
         $this->lesson = $lesson;
         if ($lesson->description) {
             $this->description = $lesson->description;

@@ -10,7 +10,7 @@ return new class extends Migration
     
     public function up()
     {
-        Schema::create('ractions', function (Blueprint $table) {
+        Schema::connection('cursos')->create('ractions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -26,6 +26,6 @@ return new class extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('ractions');
+        Schema::connection('cursos')->dropIfExists('ractions');
     }
 };
