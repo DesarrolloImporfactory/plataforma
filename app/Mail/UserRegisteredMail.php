@@ -19,6 +19,6 @@ class UserRegisteredMail extends Mailable
 
     public function build()
     {
-        return $this->view('emails.user_registered');
+        return $this->subject('Registro de usuario en Imporsuit')->view('emails.user_registered');
     }
 }

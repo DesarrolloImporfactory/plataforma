@@ -102,10 +102,10 @@ class CreateUser extends Component
                 }
             }
             $this->emit('alert', 'Registro creado exitosamente!');
-            Mail::to($usuario->email)->send(new UserRegisteredMail($usuario));
             $this->enviarDatosExternos($usuario);
+            Mail::to($usuario->email)->send(new UserRegisteredMail($usuario));
 
-            // return redirect()->to('/admin/usuarios/' . $usuario->id);
+            return redirect()->to('/admin/usuarios/' . $usuario->id);
         } catch (\Exception $th) {
             dd('alert', $th->getMessage());
         }
