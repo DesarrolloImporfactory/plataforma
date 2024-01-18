@@ -13,7 +13,7 @@
                     
                     <div x-data="{ open: false }" class="relative">
                         <button x-on:click="open = true"
-                            class="inline-flex w-full relative z-10 block bg-white p-2 focus:outline-none shadow h-10  rounded-lg text-gray-700 mr-3">
+                            class="inline-flex w-full relative z-10  bg-white p-2 focus:outline-none shadow h-10  rounded-lg text-gray-700 mr-3">
                             <i class="fa-solid fa-tags mr-2 p-1"></i>Categoria
                             <svg class="h-7 w-5 text-gray-800 ml-2" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20" fill="currentColor">
@@ -34,7 +34,7 @@
                     </div>
                     <div x-data="{ open: false }" class="relative">
                         <button x-on:click="open = true"
-                            class="ml-3 inline-flex relative z-10 block bg-white p-2 focus:outline-none shadow h-10  rounded-lg text-gray-700 mr-3">
+                            class="ml-3 inline-flex relative z-10  bg-white p-2 focus:outline-none shadow h-10  rounded-lg text-gray-700 mr-3">
                             <i class="fa-solid fa-list p-1 mr-2"></i>Niveles
                             <svg class="h-7 w-5 text-gray-800 ml-2" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 20 20" fill="currentColor">

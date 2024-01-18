@@ -13,11 +13,17 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\UserRegisteredMail;
+
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
+
 
 class CreateUser extends Component
 {
 
-    public $email, $name, $enlace, $password, $rol, $url, $perfil, $telefono;
+    public $email, $name, $enlace, $password, $rol, $url, $perfil, $telefono, $url_tienda;
 
     protected $rules = [
         'email' => 'required|string|email|max:255|unique:users',
@@ -29,9 +35,44 @@ class CreateUser extends Component
         'enlace' => 'nullable|url'
     ];
 
+    protected $listeners = ['urlTiedaUpdated'];
+
+    public function urlTiedaUpdated($url)
+    {
+        $this->url_tienda = $url;
+    }
+
     public function updated($fields)
     {
         $this->validateOnly($fields);
+    }
+
+    public function enviarDatosExternos($usuario)
+    {
+        $client = new Client();
+
+        try {
+            $response = $client->request('POST', 'https://registro.imporsuit.com/api/token.php', [
+                'json' => [
+                    'email' => $usuario->email,
+                    'url_tienda' => $usuario->url,
+                ]
+            ]);
+
+            // Obtener el cuerpo de la respuesta
+            $body = $response->getBody();
+            $contenido = $body->getContents();
+            $datos = json_decode($contenido);
+
+            if ($datos->error == true) {
+                $this->emit('alert', "No se pudo crear el registro en tokens!");
+            } else {
+                $this->emit('alert', 'Registro creado exitosamente en tokens!');
+            }
+        } catch (GuzzleException $e) {
+            // Manejar excepciones
+            return 'Error: ' . $e->getMessage();
+        }
     }
 
     public function createUser()
@@ -43,10 +84,9 @@ class CreateUser extends Component
                 'name' => $this->name,
                 'email' => $this->email,
                 'telefono' => $this->telefono,
-                'url' => $this->url,
                 'perfil_id' => $this->perfil,
-                'url' => $this->enlace,
-                'password' => md5($this->password)
+                'url' => $this->url_tienda,
+                'password' => md5($this->password),
             ])->assignRole('Alumno');
             $combo = Name::find($this->perfil);
             $cartera = Cartera::create([
@@ -62,7 +102,10 @@ class CreateUser extends Component
                 }
             }
             $this->emit('alert', 'Registro creado exitosamente!');
-            return redirect()->to('/admin/usuarios/' . $usuario->id);
+            Mail::to($usuario->email)->send(new UserRegisteredMail($usuario));
+            $this->enviarDatosExternos($usuario);
+
+            // return redirect()->to('/admin/usuarios/' . $usuario->id);
         } catch (\Exception $th) {
             dd('alert', $th->getMessage());
         }

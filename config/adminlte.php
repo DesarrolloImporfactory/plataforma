@@ -64,10 +64,10 @@ return [
     */
 
     'logo' => '',
-    'logo_img' => 'https://adminlte.io/docs/3.0/assets/img/logo-xl.png',
-    'logo_img_class' => 'brand-image-xs',
-    'logo_img_xl' => 'https://adminlte.io/docs/3.0/assets/img/logo-xl.png',
-    'logo_img_xl_class' => 'brand-image-xs',
+    'logo_img' => 'https://registro.imporsuit.com/imporsuit.png',
+    'logo_img_class' => 'brand-image-xs justify-center left-1/2',
+    'logo_img_xl' => 'https://registro.imporsuit.com/imporsuit.png',
+    'logo_img_xl_class' => 'brand-image-xs  justify-center left-1/2',
     'logo_img_alt' => null,
 
     /*
@@ -314,7 +314,7 @@ return [
             'can' => 'Admin roles',
         ],
         [
-            'text' => 'Seting role',
+            'text' => 'Configurar Roles',
             'route'  => 'admin.roles.index',
             'icon' => 'fas fa-fw fa-user-cog',
             'can' => 'Admin roles',
@@ -332,14 +332,6 @@ return [
             'icon'        => 'fas fa-fw fa-users',
             'can' => 'Admin users',
             'label_color' => 'success',
-            'active' => ['admin/usuarios/*']
-        ],
-        [
-            'text'        => 'Alumnos',
-            'route'         => 'admin.alumnos.all',
-            'icon'        => 'fas fa-fw fa-users',
-            'label_color' => 'success',
-            'can' => 'Gestionar alumnos',
             'active' => ['admin/usuarios/*']
         ],
         [
@@ -362,60 +354,7 @@ return [
             'icon' => 'fas fa-fw fa-gear',
             'can' => 'Admin cursos',
         ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*

@@ -30,7 +30,8 @@ class User extends Authenticatable
         'password',
         'telefono',
         'perfil_id',
-        'url'
+        'url',
+        'url_tienda',
     ];
 
     /**
