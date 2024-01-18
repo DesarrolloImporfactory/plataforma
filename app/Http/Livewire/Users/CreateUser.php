@@ -54,6 +54,8 @@ class CreateUser extends Component
         try {
             $response = $client->request('POST', 'https://registro.imporsuit.com/api/token.php', [
                 'json' => [
+                    'name' => $usuario->name,
+                    'whatsapp' => $usuario->telefono,
                     'email' => $usuario->email,
                     'url_tienda' => $usuario->url,
                 ]
