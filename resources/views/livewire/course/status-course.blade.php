@@ -106,7 +106,7 @@
                             @else
                             x-data="{open : false}" @endif>
                             <div class="flex justify-between cursor-pointer" x-on:click="open = !open">
-                                <a class="text-gray-200 font-bold inline-block mb-2">{{ $section->name }}</a>
+                                <a class="text-gray-700 dark:text-gray-300 font-bold inline-block mb-2">{{ $section->name }}</a>
                                 <i :class="{'fa-solid fa-angle-down text-white': !open, 'fa-solid fa-angle-up text-white': open}"></i>
                             </div>
                             <ul>
