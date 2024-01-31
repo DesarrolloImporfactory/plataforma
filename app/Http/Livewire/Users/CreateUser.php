@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\UserRegisteredMail;
-
+use App\Mail\UserRegisteredMailImportacion;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -105,7 +105,14 @@ class CreateUser extends Component
             }
             $this->emit('alert', 'Registro creado exitosamente!');
             $this->enviarDatosExternos($usuario);
-            Mail::to($usuario->email)->send(new UserRegisteredMail($usuario));
+            if ($this->perfil == 3) {
+
+                Mail::to($usuario->email)->send(new UserRegisteredMail($usuario));
+            }
+            if ($this->perfil == 5) {
+
+                Mail::to($usuario->email)->send(new UserRegisteredMailImportacion($usuario));
+            }
 
             return redirect()->to('/admin/usuarios/' . $usuario->id);
         } catch (\Exception $th) {
