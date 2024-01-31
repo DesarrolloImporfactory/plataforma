@@ -2156,51 +2156,7 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="footer ta-center dark"
-                                            style="box-sizing: border-box; clear: both; color: #999; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 20px 0; width: 100%">
-                                            <table width="100%"
-                                                style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
-                                                <tbody>
-                                                    <tr
-                                                        style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                        <td class="aligncenter footer-td"
-                                                            style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #fff; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0 10px; text-align: center; vertical-align: top; width: 100%"
-                                                            align="center" valign="top">
-                                                            <p class="unsubscribe"
-                                                                style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; font-weight: 400; line-height: 170%; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                This email was sent to {email} | <a
-                                                                    href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=unsubscribe_track&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                    class="unsubscribelink"
-                                                                    style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline">Unsubscribe</a>
-                                                                | <a href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=browser_link&amp;temp_id=IjMwOTYyOSI_3D"
-                                                                    style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                    target="_blank" class="unsubscribelink">View in
-                                                                    Browser</a></p>
-                                                            <p class="unsubscribe"
-                                                                style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; font-weight: 400; line-height: 170%; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                You are receiving this email because
-                                                                you have signed up on our website or subscribed to our
-                                                                email list.</p>
-                                                            <p class="unsubscribe"
-                                                                style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; font-weight: 400; line-height: 170%; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                <img src="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=open_track&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                    width="1" height="1" border="0"
-                                                                    style="box-sizing: border-box; display: block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; opacity: 0; padding: 0"
-                                                                    alt=""></p>
-                                                            <p class="powered"
-                                                                style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; font-weight: 700; line-height: 170%; margin: 0; mso-line-height-rule: exactly; padding: 0; text-transform: none">
-                                                                <img width="15"
-                                                                    src="https://emails.pabbly.com/images/favicon.png"
-                                                                    style="box-sizing: border-box; display: inline-block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; padding: 0; vertical-align: text-bottom"
-                                                                    alt=""> <a
-                                                                    href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=goto_website"
-                                                                    style="box-sizing: border-box; color: #111; font-family: Georgia, serif; font-size: 12px; font-weight: 700; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: none; text-transform: none">Sent
-                                                                    with Pabbly</a></p>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                        
                                     </div>
                                 </td>
                             </tr>
