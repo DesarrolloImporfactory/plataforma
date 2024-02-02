@@ -1,3 +1,6 @@
+@php
+use Illuminate\Support\Str;
+@endphp
 <div>
     @section('title', 'Alumnos')
     {{-- @include('admin.user.edit') --}}
@@ -9,7 +12,7 @@
     <div class="content-header">
         <div class="card">
             <div class="card-header">
-                <b>GESTIÓN DE USUSARIOS</b>
+                <b>GESTIÓN DE USUARIOS</b>
             </div>
             <div class="card-body">
                 <div class="container-fluid">
@@ -67,19 +70,36 @@
                                                     <i class="fa-solid fa-sort float-right"></i>
                                                 @endif
                                             </th>
+                                            <th>Enlace a Imporsuit</th>
                                             <th>SESSION</th>
                                             <th>ROL</th>
                                             <th>PERFIL</th>
+                                            <th>Cartera - Pagado</th>
+                                            <th>Cartera - Deuda</th>
+                                            <th>Suscripcion - Estado</th>
+                                            <th>Suscripcion - Días</th>
                                             <th>OPTION</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @if ($usuarios->count())
                                             @foreach ($usuarios as $item)
+                                          
                                                 <tr>
                                                     <td>{{ $item->id }}</td>
                                                     <td>{{ $item->name }}</td>
                                                     <td>{{ $item->email }}</td>
+                                                    <td>@if($item->url && !Str::contains($item->url, 'registro') )
+                                                        <a target="_black" href="{{$item->url }}/sysadmin"
+                                                            class="btn btn-sm btn-primary">Ir a Imporsuit</a></td>
+                                                    @elseif($item->url && Str::contains($item->url, 'registro'))
+                                                        <a target="_black" href="{{$item->url }}"
+                                                            class="btn btn-sm btn-info">Registro</a></td>
+                                                    @else
+                                                    <a target="_black" href="{{ route('admin.usuarios.show', $item->id) }}"
+                                                        class="btn btn-sm btn-warning">Asignar</a>
+                                                        @endif
+                                                    </td>
                                                     <td><i
                                                             class="fa-regular  {{ $item->session ? 'fa-circle-check text-teal' : 'fa-circle-xmark text-danger' }} "></i>
                                                     </td>
@@ -92,7 +112,47 @@
                                                             @endforeach
                                                         @endif
                                                     </td>
-                                                    <td>{{ $item->perfil_id ?? 'Pendiente' }}</td>
+                                                  
+                                                    <td>{{ $item->perfils->name ?? 'Pendiente' }}</td>
+                                                    @if($item->carteras->isEmpty())
+                                                    <td>
+                                                        <span class="badge bg-info">No tiene cartera</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-info">No tiene cartera</span>
+                                                    </td>
+                                              
+                                                    @else
+                                                    @foreach ($item->carteras as $cartera)
+                                                        <td>
+                                                            <span class="badge bg-primary">{{ $cartera->abonos->sum('valor') }}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-danger">{{ $cartera->saldo ?? '0' }}</span>
+                                                        </td>
+                                                    @endforeach
+                                                    @endif
+                                                    @if ($item->suscripcions->isEmpty())
+                                                    <td>
+                                                            <span class="badge bg-info">No tiene suscripcion</span>
+                                                        </td>
+                                                        <td>
+                                                            <span class="badge bg-info">No tiene suscripcion</span>
+                                                        </td>
+                                                        @else
+                                                            <td>
+                                                                @if($item->suscripcions->first()->estado == 'activo')
+                                                                
+                                                                <span class="badge bg-success">{{ $item->suscripcions->first()->estado }}</span>
+                                                                @else
+                                                                <span class="badge bg-danger">{{ $item->suscripcions->first()->estado }}</span>
+                                                                
+                                                                @endif
+                                                            </td>    
+                                                            <td>
+                                                                <span class="badge bg-primary">{{ $item->suscripcions->first()->dias }}</span>
+                                                            </td>
+                                                        @endif
                                                     <td>
                                                         <a class="" href="#" role="button"
                                                             data-bs-toggle="dropdown" aria-expanded="false">

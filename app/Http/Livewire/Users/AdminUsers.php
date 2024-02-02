@@ -2,6 +2,8 @@
 
 namespace App\Http\Livewire\Users;
 
+use App\Models\Cartera;
+use App\Models\Name;
 use App\Models\Perfil;
 use App\Models\Suscription;
 use App\Models\User;
@@ -23,14 +25,16 @@ class AdminUsers extends Component
     public function render()
     {
         $roles = Role::get();
-
-        $usuarios = User::where('name', 'like', '%' . $this->search . '%')
+        $names = Name::get();
+        $usuarios = User::with(['carteras.abonos', 'suscripcions', 'perfils'])
+            ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
             ->whereHas("roles", function ($q) {
                 $q->where("name", "Alumno");
             })->paginate(10);
-        return view('livewire.users.admin-users', compact('usuarios', 'roles'))->extends('adminlte::page');
+
+        return view('livewire.users.admin-users', compact('usuarios', 'roles', 'names'))->extends('adminlte::page');
     }
 
     protected $rules = [

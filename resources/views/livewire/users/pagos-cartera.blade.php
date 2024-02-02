@@ -56,15 +56,17 @@
                     <hr>
                     <p>Forma de pago: {{ $abono->forma->name }}</p>
                     @if ($abono->archivo)
-                        <p>Visualizar archivo: <a class="text-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Comprobante de pago <i
-                                    class="fa-regular fa-file-lines"></i></a></p>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        <p>Visualizar archivo: 
+                            <a class="text-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal{{ $abono->id }}">Comprobante de pago <i class="fa-regular fa-file-lines"></i>
+                            </a>
+                        </p>
+                        <div class="modal fade" id="exampleModal{{ $abono->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $abono->id }}"
                             aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Comprobante de pago</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel{{ $abono->id }}">Comprobante de pago</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
@@ -73,13 +75,13 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
+                                            data-bs-dismiss="modal">Cerrar</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @else
-                        <p>Visualizar archivo: <span class="text-danger">No tiene comprobante</p>
+                        <p>Visualizar archivo: <span class="text-danger">No tiene comprobante</span></p>
                     @endif
                     <button wire:click="$set('editar','true')" class="btn btn-primary btn-sm">Editar</button>
                     <button wire:click="$emit('deleteAbono',{{ $abono->id }})"

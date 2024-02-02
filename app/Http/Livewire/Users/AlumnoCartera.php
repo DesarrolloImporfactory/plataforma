@@ -54,6 +54,10 @@ class AlumnoCartera extends Component
                 ]);
                 $this->cartera = Cartera::find($this->cartera->id);
                 $this->status($this->cartera);
+
+                // reduce el saldo de la cartera
+                $this->cartera->update(['saldo' => $this->cartera->saldo - $this->valor]);
+
                 $this->reset(['valor', 'forma_pago']);
                 $this->emit('estatus');
                 $this->emit('alert', 'Pago registrado con exito');
@@ -85,6 +89,4 @@ class AlumnoCartera extends Component
 
         return true;
     }
-
-    
 }

@@ -21,13 +21,16 @@ class Suscription extends Model
         'dias'
     ];
 
-    public function usuarios(){
-        return $this->belongsTo(User::class,'usuario_id','id');
+    public function usuarios()
+    {
+        return $this->belongsTo(User::class, 'usuario_id', 'id');
     }
-    public function tipos(){
-        return $this->belongsTo(Tipo::class,'tipo_id','id');
+    public function tipos()
+    {
+        return $this->belongsTo(Tipo::class, 'tipo_id', 'id');
     }
-    public function sistemas(){
-        return $this->belongsTo(Sistema::class,'sistema_id','id');
+    public function sistemas()
+    {
+        return $this->belongsTo(Sistema::class, 'sistema_id', 'id');
     }
 }

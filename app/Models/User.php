@@ -69,7 +69,10 @@ class User extends Authenticatable
         // return $this->hasOne('App\Models\Profile');
         return $this->hasOne(Profile::class, 'user_id', 'id');
     }
-
+    public function perfils()
+    {
+        return $this->belongsTo(Name::class, 'perfil_id', 'id');
+    }
     public function courses_dictaded()
     {
         return $this->hasMany(Course::class, 'user_id', 'id');
@@ -113,5 +116,9 @@ class User extends Authenticatable
     public function tipos()
     {
         return $this->hasMany(TipoComision::class, 'vendedor_id', 'id');
+    }
+    public function suscripcions()
+    {
+        return $this->hasMany(Suscription::class, 'usuario_id', 'id');
     }
 }
