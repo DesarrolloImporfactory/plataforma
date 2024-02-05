@@ -15,6 +15,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 use Livewire\Livewire;
 
 class AdminUsers extends Component
@@ -31,7 +32,7 @@ class AdminUsers extends Component
     public $search = '';
     public $name, $email, $password, $idUser, $rol;
     public $sort = "id", $direction = "asc";
-    protected $listeners = ['render' => 'render', 'delete', 'generarCartera' => 'generarCartera'];
+    protected $listeners = ['render' => 'render', 'delete', 'generarCartera' => 'generarCartera', 'asignar' => 'asignar'];
 
     public function render()
     {
@@ -198,6 +199,41 @@ class AdminUsers extends Component
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function asignar($userId, $perfilId)
+    {
+        $client = new Client();
+
+        $usuario = User::find($userId);
+        $url = "https://registro.imporsuit.com/registro_tienda.php?premium=3&token=csie5uh4msnokqdluc2ad&correo=" . $usuario->email;
+        try {
+            $response = $client->request('POST', 'https://registro.imporsuit.com/api/token.php', [
+                'json' => [
+                    'name' => $usuario->name,
+                    'whatsapp' => $usuario->telefono,
+                    'email' => $usuario->email,
+                    'url_tienda' => $url
+                ]
+            ]);
+
+            // Obtener el cuerpo de la respuesta
+            $body = $response->getBody();
+            $contenido = $body->getContents();
+            $datos = json_decode($contenido);
+
+            if ($datos->error == true) {
+                $this->emit('alert', "No se pudo crear el registro en tokens!");
+            } else {
+                User::where('id', $userId)->update([
+                    'url' => $url,
+                ]);
+                $this->emit('alert', 'Registro creado exitosamente en tokens!');
+            }
+        } catch (GuzzleException $e) {
+            // Manejar excepciones
+            return 'Error: ' . $e->getMessage();
         }
     }
 }

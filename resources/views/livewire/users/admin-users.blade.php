@@ -96,8 +96,9 @@ use Illuminate\Support\Str;
                                                         <a target="_black" href="{{$item->url }}"
                                                             class="btn btn-sm btn-info">Registro</a></td>
                                                     @else
-                                                    <a target="_black" href="{{ route('admin.usuarios.show', $item->id) }}"
+                                                    <a  wire:click="asignar('{{ $item->id }}', '{{ $item->perfil_id }}')"
                                                         class="btn btn-sm btn-warning">Asignar</a>
+                                                    
                                                         @endif
                                                     </td>
                                                     <td><i
@@ -268,6 +269,10 @@ use Illuminate\Support\Str;
               $('#crearCarteraModal').modal('show');
         }
         );
+
+        Livewire.on('asignar', (userId, perfilId) => {
+            Livewire.emitTo('users.admin-users', 'asignar', userId, perfilId);
+        });
         
         function generarCartera(event) {
             event.preventDefault();
