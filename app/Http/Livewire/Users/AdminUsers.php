@@ -164,7 +164,7 @@ class AdminUsers extends Component
             'saldo' => $combo->precio,
             'alumno_id' => $userId
         ]);
-        $suscripcion = $this->suscripcion($perfil, $userId);
+        // $suscripcion = $this->suscripcion($perfil, $userId);
         $this->emit('alert', 'Cartera y suscripcion creada exitosamente!');
     }
     public function suscripcion($perfil, $usuario)
