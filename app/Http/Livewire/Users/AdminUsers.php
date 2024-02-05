@@ -5,6 +5,9 @@ namespace App\Http\Livewire\Users;
 use App\Models\Cartera;
 use App\Models\Name;
 use App\Models\Perfil;
+use Carbon\Carbon;
+use App\Models\Course;
+
 use App\Models\Suscription;
 use App\Models\User;
 use Illuminate\Support\Facades\Http;
@@ -12,20 +15,29 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 use GuzzleHttp\Client;
+use Livewire\Livewire;
 
 class AdminUsers extends Component
 {
+    public $showModal = false;
+    public $selectedUserId;
+    public $perfilSeleccionado;
+    public $perfilId;
+    public $perfil;
+    public $userId;
+    public $nombreUsuario;
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $search = '';
     public $name, $email, $password, $idUser, $rol;
     public $sort = "id", $direction = "asc";
-    protected $listeners = ['render' => 'render', 'delete'];
+    protected $listeners = ['render' => 'render', 'delete', 'generarCartera' => 'generarCartera'];
 
     public function render()
     {
+        $perfiles = Perfil::all();
         $roles = Role::get();
-        $names = Name::get();
+        $names = Name::all();
         $usuarios = User::with(['carteras.abonos', 'suscripcions', 'perfils'])
             ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')
@@ -34,7 +46,7 @@ class AdminUsers extends Component
                 $q->where("name", "Alumno");
             })->paginate(10);
 
-        return view('livewire.users.admin-users', compact('usuarios', 'roles', 'names'))->extends('adminlte::page');
+        return view('livewire.users.admin-users', compact('usuarios', 'roles', 'names', 'perfiles'))->extends('adminlte::page');
     }
 
     protected $rules = [
@@ -141,36 +153,51 @@ class AdminUsers extends Component
         }
     }
 
-    public function suscripcion()
+
+    public function generarCartera($perfil, $userId)
     {
-        // $users = User::where('id', '>', '11067')->get();
-        // foreach ($users as $user) {
-        //     $suscripciones = Perfil::where('name_id', $user->perfil_id)->get();
+        $combo = Name::find($perfil);
 
-        //     foreach ($suscripciones as $suscripcion) {
-        //         Suscription::create([
-        //             'usuario_id' => $user->id,
-        //             'sistema_id' => $suscripcion->sistema_id,
-        //             'estado' => $suscripcion->estado,
-        //             'fecha_fin' => $suscripcion->fecha_fin,
-        //             'dias' =>  $suscripcion->dias
-        //         ]);
-        //     }
-        // }
-        $response = Http::withHeaders([
-            'wolkvox-token' => '7b69645f6469737472697d2d3230323331303330313530313435',
-            'Content-Type' => 'application/json',
-        ])->post('https://wv0100.wolkvox.com/api/v2/whatsapp.php?api=send_template_official', [
-            "connector_id" => "1947",
-            "telephone" => "593963607750",
-            "template_name" => "comprobacion",
-            "template_vars" => "hola;hola;hola;hola",
-            "customer_id" => "",
-            "url_attach" => "",
+        $cartera = Cartera::create([
+            'estado' => 'pendiente',
+            'fecha' => Carbon::now()->toDateString(),
+            'saldo' => $combo->precio,
+            'alumno_id' => $userId
         ]);
+        $suscripcion = $this->suscripcion($perfil, $userId);
+        $this->emit('alert', 'Cartera y suscripcion creada exitosamente!');
+    }
+    public function suscripcion($perfil, $usuario)
+    {
+        $suscripciones = Perfil::where('name_id', $perfil)->get();
+        $conteoInserciones = 0;
 
-        // Obtener la respuesta
-        $responseBody = $response->body();
-        $this->emit('enviar-mensaje', $responseBody);
+        foreach ($suscripciones as $suscripcion) {
+            if ($suscripcion->sistemas->tipo == 'curso') {
+                $curso = Course::where('title', $suscripcion->sistemas->name)->first(); // Obtener el objeto Course
+                if ($curso) {
+                    $curso->students()->attach(auth()->user()->id);
+                }
+            }
+        }
+
+        foreach ($suscripciones as $suscripcion) {
+            $resultado = Suscription::create([
+                'usuario_id' => $usuario,
+                'sistema_id' => $suscripcion->sistema_id,
+                'estado' => $suscripcion->estado,
+                'fecha_fin' => $suscripcion->fecha_fin,
+                'dias' =>  $suscripcion->dias
+            ]);
+
+            if ($resultado) {
+                $conteoInserciones++;
+            }
+        }
+        if ($conteoInserciones == count($suscripciones)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

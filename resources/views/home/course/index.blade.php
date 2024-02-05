@@ -16,7 +16,6 @@
     @if (session('mensaje'))
         <script>
             Swal.fire({
-                position: 'top-end',
                 icon: 'success',
                 title: 'Bienvenido al sistema educativo',
                 showConfirmButton: false,

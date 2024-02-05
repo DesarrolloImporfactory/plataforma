@@ -117,6 +117,7 @@ use Illuminate\Support\Str;
                                                     @if($item->carteras->isEmpty())
                                                     <td>
                                                         <span class="badge bg-info">No tiene cartera</span>
+                                                        <a class="btn btn-sm btn-success" wire:click="$emit('cartera','{{ $item->id }}', '{{ $item->name }}')">Crear cartera</a>
                                                     </td>
                                                     <td>
                                                         <span class="badge bg-info">No tiene cartera</span>
@@ -202,8 +203,41 @@ use Illuminate\Support\Str;
             </div>
         </div>
     </div>
-
+<!-- Modal para crear cartera -->
+<!-- Utiliza la clase 'show' de Bootstrap y estilos inline para controlar la visibilidad del modal -->
+<div class="modal fade " id="crearCarteraModal" tabindex="-1" aria-labelledby="crearCarteraModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="crearCarteraModalLabel">Crear Cartera</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="generarCartera(event)">
+            @csrf
+            <input type="hidden" id="userId" name="userId">
+            <div class="mb-3">
+              <label for="nombreUsuario" class="form-label">Nombre del Usuario</label>
+              <input type="text" class="form-control" id="nombreUsuario" readonly>
+            </div>
+            <div class="mb-3">
+              <label for="perfilSelect" class="form-label">Seleccionar Perfil</label>
+              <select class="form-select" id="perfilSelect" >
+                @foreach($names as $perfil)
+                  <option value="{{ $perfil->id }}">{{ $perfil->name }}</option>
+                @endforeach
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" onclick="generarCartera(event)">Guardar</button>
+        </div>
+      </div>
+    </div>
 </div>
+
 
 @push('js')
     <script>
@@ -226,6 +260,24 @@ use Illuminate\Support\Str;
                 }
             })
         });
+
+        Livewire.on('cartera', (userId, userName) => {
+            Livewire.emitTo('users.admin-users', 'cartera', (userId, userName));
+            $('#nombreUsuario').val(userName);
+            $('#userId').val(userId);
+              $('#crearCarteraModal').modal('show');
+        }
+        );
+        
+        function generarCartera(event) {
+            event.preventDefault();
+            let perfil = $('#perfilSelect').val();
+            let userId = $('#userId').val();
+            Livewire.emitTo('users.admin-users','generarCartera', perfil, userId);
+            // Cerrar el modal
+            console.log(perfil, userId);
+            $('#crearCarteraModal').modal('hide');
+        }
     </script>
 @endpush
 @push('css')
