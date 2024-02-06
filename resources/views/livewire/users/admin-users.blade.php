@@ -125,14 +125,22 @@ use Illuminate\Support\Str;
                                                     </td>
                                               
                                                     @else
+                                                   @php
+                                                    $total = 0;
+                                                    $pagadooo   = 0;
+                                                        @endphp
                                                     @foreach ($item->carteras as $cartera)
-                                                        <td>
-                                                            <span class="badge bg-primary">{{ $cartera->abonos->sum('valor') }}</span>
-                                                        </td>
-                                                        <td>
-                                                            <span class="badge bg-danger">{{ $cartera->saldo ?? '0' }}</span>
-                                                        </td>
+                                                        @php
+                                                            $total += $cartera->abonos->sum('valor');
+                                                            $pagadooo += $cartera->saldo
+                                                        @endphp
                                                     @endforeach
+                                                    <td>
+                                                        <span class="badge bg-success">{{ $total }}</span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="badge bg-danger">{{ $pagadooo }}</span>
+                                                    </td>
                                                     @endif
                                                     @if ($item->suscripcions->isEmpty())
                                                     <td>
