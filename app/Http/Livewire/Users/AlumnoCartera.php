@@ -42,7 +42,7 @@ class AlumnoCartera extends Component
     {
         $this->validate();
         try {
-            if ($this->valor > $this->cartera->saldo || (($this->cartera->abonos->sum('valor') + $this->valor) > $this->cartera->saldo)) {
+            if ($this->valor > $this->cartera->saldo) {
                 $this->emit('alert', 'Revise el pago!');
             } else {
                 $url = $this->file->store('comprobantes', 'public');
