@@ -49,7 +49,7 @@ class PagosCartera extends Component
     {
         $this->validate();
         try {
-            if ($this->valor > $this->abono->cartera->saldo || ((($this->abono->sum('valor') - $this->abono->valor) + $this->valor) > $this->abono->cartera->saldo)) {
+            if ($this->valor > $this->abono->cartera->saldo) {
                 $this->emit('alert', 'Revise el pago!');
             } else {
                 if ($this->file) {
@@ -75,7 +75,6 @@ class PagosCartera extends Component
             // $this->abono = Abono::find($this->abono->id);
             $this->status($this->abono->cartera_id);
             $this->editar = 'false';
-            
         } catch (\Exception $e) {
             dd('alert', $e->getMessage());
         }
