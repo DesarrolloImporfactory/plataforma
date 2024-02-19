@@ -69,9 +69,16 @@ class UpdateUser extends Component
             }
             $suscripciones_sistemas = Perfil::where('name_id', $this->perfil)->get();
             $fecha_inicio = $datafinal->fecha_inicio;
+            if ($fecha_inicio == null) {
+                $fecha_inicio = $datafinal->created_at;
+            }
             $dias = $datafinal->dias;
             $fecha_inicio = Carbon::parse($fecha_inicio);
             $fecha_fin = Carbon::parse($fecha_inicio)->addDays($dias);
+            if ($fecha_fin < Carbon::now()) {
+                $dias = 0;
+            }
+            $estado = $fecha_fin < Carbon::now() ? 'Caducada' : 'Activa';
 
 
             foreach ($suscripciones_sistemas as $suscripciones_sistema) {
@@ -80,7 +87,8 @@ class UpdateUser extends Component
                     'sistema_id' => $suscripciones_sistema->sistema_id,
                     'fecha_inicio' => $fecha_inicio,
                     'fecha_fin' => $fecha_fin,
-                    'dias' => $dias
+                    'dias' => $dias,
+                    'estado' => $estado
                 ]);
             }
         }
