@@ -9,7 +9,7 @@ class Cartera extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['estado','fecha','saldo','alumno_id','detalle'];
+    protected $fillable = ['estado', 'fecha', 'saldo', 'alumno_id', 'detalle'];
 
     public function alumnos()
     {

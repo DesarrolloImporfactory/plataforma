@@ -50,7 +50,7 @@ class PagosCartera extends Component
         $this->validate();
         try {
             if ($this->valor > $this->abono->cartera->saldo || ((($this->abono->sum('valor') - $this->abono->valor) + $this->valor) > $this->abono->cartera->saldo)) {
-                $this->emit('alert', 'Revisesss el pago!');
+                $this->emit('alert', 'Revise el pago!');
             } else {
                 if ($this->file) {
                     $file = $this->file->store('comprobantes', 'public');

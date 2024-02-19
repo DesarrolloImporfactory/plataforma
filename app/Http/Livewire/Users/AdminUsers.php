@@ -43,11 +43,10 @@ class AdminUsers extends Component
             ->where('name', 'like', '%' . $this->search . '%')
             ->orWhere('email', 'like', '%' . $this->search . '%')
             ->orderBy($this->sort, $this->direction)
-            ->whereHas("roles", function ($q) {
-                $q->where("name", "Alumno");
-            })->paginate(10);
+            ->paginate(10);
 
         return view('livewire.users.admin-users', compact('usuarios', 'roles', 'names', 'perfiles'))->extends('adminlte::page');
+        $perfiles = Perfil::all();
     }
 
     protected $rules = [
