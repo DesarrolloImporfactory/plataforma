@@ -27,6 +27,7 @@ class UpdateUser extends Component
         $this->enlace = $this->user->url;
         $this->password = $this->user->password;
         $this->name = $this->user->name;
+        $this->perfil = $this->user->perfil_id;
         if ($this->user->carteras->count() > 0) {
             $this->cartera = 'true';
         }
@@ -60,12 +61,37 @@ class UpdateUser extends Component
         } else {
             $password = md5($this->password);
         }
+        if ($this->perfil != $data->perfil_id) {
+            $data_perfil = Suscription::where('usuario_id', $data->id)->get();
+            $datafinal = $data_perfil->first();
+            foreach ($data_perfil as $perfila) {
+                $perfila->delete();
+            }
+            $suscripciones_sistemas = Perfil::where('name_id', $this->perfil)->get();
+            $fecha_inicio = $datafinal->fecha_inicio;
+            $dias = $datafinal->dias;
+            $fecha_inicio = Carbon::parse($fecha_inicio);
+            $fecha_fin = Carbon::parse($fecha_inicio)->addDays($dias);
+
+
+            foreach ($suscripciones_sistemas as $suscripciones_sistema) {
+                Suscription::create([
+                    'usuario_id' => $data->id,
+                    'sistema_id' => $suscripciones_sistema->sistema_id,
+                    'fecha_inicio' => $fecha_inicio,
+                    'fecha_fin' => $fecha_fin,
+                    'dias' => $dias
+                ]);
+            }
+        }
+
         $this->user->update([
             'name' => $this->name,
             'email' => $this->email,
             'telefono' => $this->telefono,
             'password' => $password,
-            'url' => $this->url
+            'url' => $this->enlace,
+            'perfil_id' => $this->perfil
         ]);
         $this->emit('alert', 'Registro actualizado exitosamente!');
     }
@@ -99,6 +125,4 @@ class UpdateUser extends Component
             return true;
         }
     }
-
-   
 }

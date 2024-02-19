@@ -43,6 +43,16 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
+                                <div class="col form-group">
+                                    <p>Perfil</p>
+                                    <select class="form-select" wire:model='perfil'>
+                                        <option value="">Seleccione un perfil</option>
+                                        @foreach ($perfiles as $perfila)
+                                            <option value="{{ $perfila->id }}" {{($perfil == $perfila->id )? "selected" : ""}}>{{ $perfila->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
