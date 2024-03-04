@@ -95,7 +95,7 @@ function actualizarURL() {
     var url = "https://registro.imporsuit.com/registro_tienda.php?premium=";
     let premium;
     if(perfil == 3 || perfil == 4 || perfil == 5) {
-        premium = 3;
+        premium = 2;
     } else if(perfil == 6 || perfil == 7) {
         premium = 2;
     } else {
