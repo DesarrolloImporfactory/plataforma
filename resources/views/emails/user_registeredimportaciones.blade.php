@@ -2048,7 +2048,7 @@
                                                                                 style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><a
                                                                                     id="mrD1xi4"
                                                                                     style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                    href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=mrD1xi4&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
+                                                                                    href="https://mstr.ly/CICLO-IMPORTMARZ-2024"
                                                                                     target="_blank" rel="noopener">GRUPO
                                                                                     PRIVADO</a></strong></p>
                                                                         <p class="selectable-text copyable-text iq0m558w g0rxnol2"
