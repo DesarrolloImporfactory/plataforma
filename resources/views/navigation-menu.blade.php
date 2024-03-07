@@ -15,6 +15,11 @@
             'route' => url('http://194.163.183.231:8085/home'),
             'active' => '',
         ],
+        [
+            'name' => 'Tutoriales',
+            'route' => url("https://mstr.ly/tutoriales-imporsuit"),
+            'active' => '',
+        ],
     ];
 @endphp
 
