@@ -83,7 +83,7 @@ class PagosCartera extends Component
     public function status($id)
     {
         $cartera = Cartera::find($id);
-        if ($cartera->abonos->sum('valor') == $cartera->saldo) {
+        if ($cartera->saldo == 0) {
             $cartera->update(['estado' => 'pagado']);
         } else {
             $cartera->update(['estado' => 'pagando']);

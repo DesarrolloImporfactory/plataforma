@@ -57,6 +57,7 @@ class AlumnoCartera extends Component
 
                 // reduce el saldo de la cartera
                 $this->cartera->update(['saldo' => $this->cartera->saldo - $this->valor]);
+                $this->status($this->cartera);
 
                 $this->reset(['valor', 'forma_pago']);
                 $this->emit('estatus');
@@ -80,7 +81,7 @@ class AlumnoCartera extends Component
 
     public function status(Cartera $cartera)
     {
-        if ($cartera->abonos->sum('valor') == $cartera->saldo) {
+        if ($cartera->saldo == 0) {
             $cartera->update(['estado' => 'pagado']);
         } else {
             $cartera->update(['estado' => 'pagando']);
