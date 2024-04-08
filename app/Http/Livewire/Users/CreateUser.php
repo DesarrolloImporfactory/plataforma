@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\UserRegisteredMail;
+use App\Mail\UserRegisteredMailImpor;
 use App\Mail\UserRegisteredMailImportacion;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
@@ -112,6 +113,9 @@ class CreateUser extends Component
             if ($this->perfil == 5) {
 
                 Mail::to($usuario->email)->send(new UserRegisteredMailImportacion($usuario));
+            }
+            if ($this->perfil == 16) {
+                Mail::to($usuario->email)->send(new UserRegisteredMailImpor($usuario));
             }
 
             return redirect()->to('/admin/usuarios/' . $usuario->id);
