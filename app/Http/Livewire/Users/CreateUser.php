@@ -19,7 +19,7 @@ use App\Mail\UserRegisteredMailImpor;
 use App\Mail\UserRegisteredMailImportacion;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-
+use Illuminate\Support\Facades\Hash;
 
 class CreateUser extends Component
 {
@@ -89,7 +89,7 @@ class CreateUser extends Component
                 'telefono' => $this->telefono,
                 'perfil_id' => $this->perfil,
                 'url' => $this->url_tienda,
-                'password' => md5($this->password),
+                'password' => Hash::make($this->password),
             ])->assignRole('Alumno');
             $combo = Name::find($this->perfil);
             $cartera = Cartera::create([

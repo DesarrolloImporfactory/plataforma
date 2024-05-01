@@ -11,6 +11,7 @@ use App\Models\Suscription;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 use Livewire\Component;
 
@@ -59,7 +60,7 @@ class UpdateUser extends Component
         if ($this->password == $data->password) {
             $password = $data->password;
         } else {
-            $password = md5($this->password);
+            $password = Hash::make($this->password);
         }
         if ($this->perfil != $data->perfil_id) {
             $data_perfil = Suscription::where('usuario_id', $data->id)->get();

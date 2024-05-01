@@ -16,6 +16,7 @@ use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Livewire;
 
 class AdminUsers extends Component
@@ -87,7 +88,7 @@ class AdminUsers extends Component
             $usuario = User::create([
                 'name' => $this->name,
                 'email' => $this->email,
-                'password' => md5($this->password)
+                'password' =>  Hash::make($this->password)
             ])->assignRole($this->rol);
             $this->emit('alert', 'Registro creado exitosamente!');
             $this->emitTo('user.table-users', 'render');
@@ -110,7 +111,7 @@ class AdminUsers extends Component
         if ($this->password == $data->password) {
             $password = $data->password;
         } else {
-            $password = md5($this->password);
+            $password =  Hash::make($this->password);
         }
         User::where('id', $this->idUser)->update([
             'name' => $this->name,

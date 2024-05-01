@@ -23,7 +23,7 @@ class ResetUserPassword implements ResetsUserPasswords
         ])->validate();
 
         $user->forceFill([
-            'password' => md5($input['password']),
+            'password' => Hash::make($input['password']),
         ])->save();
     }
 }

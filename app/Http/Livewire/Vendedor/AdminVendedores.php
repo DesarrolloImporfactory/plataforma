@@ -6,6 +6,7 @@ use App\Models\Tipo;
 use App\Models\TipoComision;
 use Livewire\Component;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\WithPagination;
 use Spatie\Permission\Models\Role;
 
@@ -14,11 +15,11 @@ class AdminVendedores extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $search = '';
-    public $name, $email, $password, $idUser, $rol, $comisionesTipo='0', $comision, $valor;
+    public $name, $email, $password, $idUser, $rol, $comisionesTipo = '0', $comision, $valor;
     public $sort = "id", $direction = "asc";
     protected $listeners = ['render' => 'render', 'delete'];
 
-    
+
     public function render()
     {
         $roles = Role::get();
@@ -68,7 +69,7 @@ class AdminVendedores extends Component
             $usuario = User::create([
                 'name' => $this->name,
                 'email' => $this->email,
-                'password' => md5($this->password)
+                'password' =>  Hash::make($this->password),
             ])->assignRole('Vendedor');
             $this->emit('alert', 'Registro creado exitosamente!');
             $this->emitTo('user.table-users', 'render');
@@ -90,7 +91,7 @@ class AdminVendedores extends Component
         if ($this->password == $data->password) {
             $password = $data->password;
         } else {
-            $password = md5($this->password);
+            $password = Hash::make($this->password);
         }
         User::where('id', $this->idUser)->update([
             'name' => $this->name,
