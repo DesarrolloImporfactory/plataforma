@@ -2048,7 +2048,7 @@
                                                                                 style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><a
                                                                                     id="mrD1xi4"
                                                                                     style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                    href="https://mstr.ly/CICLO-IMPORTMARZ-2024"
+                                                                                    href="https://mstr.ly/CICLO-IMPORTMAY-2024"
                                                                                     target="_blank" rel="noopener">GRUPO
                                                                                     PRIVADO</a></strong></p>
                                                                         <p class="selectable-text copyable-text iq0m558w g0rxnol2"
