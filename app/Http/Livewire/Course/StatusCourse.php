@@ -54,6 +54,7 @@ class StatusCourse extends Component
 
     public function stateLesson()
     {
+        echo "XD";
         if ($this->current->completed) {
             $this->current->users()->detach(auth()->user()->id);
         } else {
@@ -85,7 +86,7 @@ class StatusCourse extends Component
 
         $this->current = Lesson::find($this->current->id);
         $this->curso = Course::find($this->curso->id);
-        $this->emit('update','actualizar');
+        $this->emit('update', 'actualizar');
     }
     public function getNextProperty()
     {

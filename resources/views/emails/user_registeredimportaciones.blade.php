@@ -1787,9 +1787,7 @@
     </style>
 </head>
 
-<body align="center"
-    style="-ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; background: #01191d; height: 100%; line-height: 1.7; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%"
-    bgcolor="#01191d">
+<body align="center" style="-ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; background: #01191d; height: 100%; line-height: 1.7; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%" bgcolor="#01191d">
     <style type="text/css">
         body * {
             margin: 0;
@@ -1843,290 +1841,129 @@
             width: 100%;
         }
     </style>
-    <table align="center" class="body-wrap" height="100%" width="100%"
-        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #e0e0e0 url() repeat center; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%; word-break: break-word"
-        bgcolor="#e0e0e0" background="url()">
+    <table align="center" class="body-wrap" height="100%" width="100%" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #e0e0e0 url() repeat center; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%; word-break: break-word" bgcolor="#e0e0e0" background="url()">
         <tbody>
-            <tr
-                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                <td align="center"
-                    style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; vertical-align: top; width: 100%"
-                    valign="top">
-                    <table cellpadding="0" cellspacing="0"
-                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border: 0; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; max-width: 600px !important; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
+            <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                <td align="center" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; vertical-align: top; width: 100%" valign="top">
+                    <table cellpadding="0" cellspacing="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; border: 0; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; max-width: 600px !important; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
                         <tbody>
-                            <tr
-                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                <td class="container"
-                                    style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; clear: both !important; display: block !important; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0 auto; max-width: 600px !important; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; vertical-align: top; width: 100%"
-                                    valign="top">
-                                    <div class="content"
-                                        style="box-sizing: border-box; display: block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0 auto; max-width: 600px; mso-line-height-rule: exactly; padding: 0">
-                                        <table class="main" width="100%" cellpadding="0" cellspacing="0"
-                                            style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #FFFFFF; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%"
-                                            bgcolor="#FFFFFF">
+                            <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                <td class="container" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; clear: both !important; display: block !important; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0 auto; max-width: 600px !important; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; vertical-align: top; width: 100%" valign="top">
+                                    <div class="content" style="box-sizing: border-box; display: block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0 auto; max-width: 600px; mso-line-height-rule: exactly; padding: 0">
+                                        <table class="main" width="100%" cellpadding="0" cellspacing="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #FFFFFF; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%" bgcolor="#FFFFFF">
                                             <tbody>
-                                                <tr
-                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                    <td class="aligncenter"
-                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: center; vertical-align: top; width: 100%"
-                                                        align="center" valign="top">
-                                                        <div align="center"
-                                                            style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                            <img width="600"
-                                                                src="https://mailget.s3.amazonaws.com/upload_files/1685401455-85765387-encabezado_imporfactory.jpg"
-                                                                alt=""
-                                                                style="box-sizing: border-box; display: block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; padding: 0">
+                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                    <td class="aligncenter" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                                                        <div align="center" style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                            <img width="600" src="https://mailget.s3.amazonaws.com/upload_files/1685401455-85765387-encabezado_imporfactory.jpg" alt="" style="box-sizing: border-box; display: block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; padding: 0">
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr
-                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                    <td class="content-wrap"
-                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0 20px 20px; vertical-align: top; width: 100%"
-                                                        valign="top">
-                                                        <table width="100%" cellpadding="0" cellspacing="0"
-                                                            style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
+                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                    <td class="content-wrap" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0 20px 20px; vertical-align: top; width: 100%" valign="top">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 100%">
                                                             <tbody>
-                                                                <tr
-                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                    <td class="content-block"
-                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%"
-                                                                        valign="top">
-                                                                        <p
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                    <td class="content-block" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%" valign="top">
+                                                                        <p style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
                                                                             Hola&nbsp;{{$user->name }}</p>
-                                                                        <p
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">¡Felicidades!
+                                                                        <p style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">¡Felicidades!
                                                                                 ¡Ya eres parte del Club de
-                                                                                Importadores!</strong></p>
-                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2"
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⚠️</span></span>
-                                                                            <strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                    class="selectable-text copyable-text nbipi2bn"
-                                                                                    style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">IMPORTANTE&nbsp;</strong></strong><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⚠️</span></span>
+                                                                                Importadores!</strong>
                                                                         </p>
-                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2"
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <span
-                                                                                style="box-sizing: border-box; color: #000000; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Dale
+                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⚠️</span></span>
+                                                                            <strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong class="selectable-text copyable-text nbipi2bn" style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">IMPORTANTE&nbsp;</strong></strong><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⚠️</span></span>
+                                                                        </p>
+                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <span style="box-sizing: border-box; color: #000000; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Dale
                                                                                 clic al botón para revisar instrucciones
                                                                                 detalladas de la Metodología Importador
-                                                                                3en1</span></p>
+                                                                                3 en 1</span>
+                                                                        </p>
                                                                     </td>
                                                                 </tr>
-                                                                <tr
-                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                    <td class="content-block" align="center"
-                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%"
-                                                                        valign="top">
-                                                                        <table width="160" cellpadding="0"
-                                                                            cellspacing="0"
-                                                                            style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 160px">
-                                                                            <tbody
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                                <tr
-                                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                                    <td class="btn-primary-td"
-                                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #1b247a none no-repeat center / cover; border-radius: 5px; box-sizing: border-box; color: #FFFFFF; cursor: pointer; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 10px 35px; text-align: center; vertical-align: top; width: 100%"
-                                                                                        align="center" bgcolor="#1b247a"
-                                                                                        valign="top">
-                                                                                        <a href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=OhyAsz1&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                                            target="_blank"
-                                                                                            class="btn-primary btn-inline"
-                                                                                            style="background: #1b247a; border-radius: 5px; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: Georgia, serif; font-weight: 700; line-height: 2; margin: 0; max-width: 500px; mso-line-height-rule: exactly; padding: 0; text-align: center; text-decoration: none; width: max-content">INSTRUCCIONES</a>
+                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                    <td class="content-block" align="center" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%" valign="top">
+                                                                        <table width="160" cellpadding="0" cellspacing="0" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 0; width: 160px">
+                                                                            <tbody style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                                    <td class="btn-primary-td" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #1b247a none no-repeat center / cover; border-radius: 5px; box-sizing: border-box; color: #FFFFFF; cursor: pointer; font-family: Georgia,Helvetica,Arial,sans-serif; height: 100%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 10px 35px; text-align: center; vertical-align: top; width: 100%" align="center" bgcolor="#1b247a" valign="top">
+                                                                                        <a href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=OhyAsz1&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type" target="_blank" class="btn-primary btn-inline" style="background: #1b247a; border-radius: 5px; box-sizing: border-box; color: #FFFFFF; cursor: pointer; display: inline-block; font-family: Georgia, serif; font-weight: 700; line-height: 2; margin: 0; max-width: 500px; mso-line-height-rule: exactly; padding: 0; text-align: center; text-decoration: none; width: max-content">INSTRUCCIONES</a>
                                                                                     </td>
                                                                                 </tr>
                                                                             </tbody>
                                                                         </table>
                                                                     </td>
                                                                 </tr>
-                                                                <tr
-                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                    <td class="content-block"
-                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%"
-                                                                        valign="top">
-                                                                        <p
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            Aquí están tus&nbsp;<strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">accesos</strong>
+                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                    <td class="content-block" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%" valign="top">
+                                                                        <p style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            Aquí están tus&nbsp;<strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">accesos</strong>
                                                                             para ingresar a todas nuestras plataformas.
-                                                                            🙌<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">SIGUE
-                                                                                ESTOS PASOS</strong><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">1️⃣&nbsp;</span></span>Abre
-                                                                            el enlace de la plataforma.<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">2️⃣&nbsp;</span></span>Ingresa
-                                                                            usando el usuario y contraseña<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">3️⃣&nbsp;</span></span>¡Ya
-                                                                            estás adentro!<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">✅&nbsp;<strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">PLATAFORMA
-                                                                                EDUCATIVA</strong><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">:&nbsp;</strong><a
-                                                                                id="5xQXVO2"
-                                                                                style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=5xQXVO2&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                                target="_blank"
-                                                                                rel="noopener">Ingresa</a>&nbsp; &nbsp;
-                                                                            &nbsp; &nbsp;<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">¡Aqui
+                                                                            🙌<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">SIGUE
+                                                                                ESTOS PASOS</strong><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">1️⃣&nbsp;</span></span>Abre
+                                                                            el enlace de la plataforma.<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">2️⃣&nbsp;</span></span>Ingresa
+                                                                            usando el usuario y contraseña<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">3️⃣&nbsp;</span></span>¡Ya
+                                                                            estás adentro!<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">✅&nbsp;<strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">PLATAFORMA
+                                                                                EDUCATIVA</strong><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">:&nbsp;</strong><a id="5xQXVO2" style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline" href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=5xQXVO2&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type" target="_blank" rel="noopener">Ingresa</a>&nbsp; &nbsp;
+                                                                            &nbsp; &nbsp;<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">¡Aqui
                                                                             encontraras todo el paso a paso exacto, para
-                                                                            iniciar un negocio<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">de
+                                                                            iniciar un negocio<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">de
                                                                             importaciones tanto en grandes como en
                                                                             pequeñas cantidades!</p>
-                                                                        <p
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            ✅ <strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">IMPORSUIT:</strong>&nbsp;<a
-                                                                                id="IaDqHf3"
-                                                                                style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=IaDqHf3&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                                target="_blank"
-                                                                                rel="noopener">Ingresar</a><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">¡La
+                                                                        <p style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            ✅ <strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">IMPORSUIT:</strong>&nbsp;<a id="IaDqHf3" style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline" href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=IaDqHf3&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type" target="_blank" rel="noopener">Ingresar</a><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">¡La
                                                                             suit de herramientas, que todo importador
-                                                                            necesita, desde infoaduana<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">calculadoras,
+                                                                            necesita, desde infoaduana<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">calculadoras,
                                                                             productos, facturacion y tienda virtual en
-                                                                            un solo lugar!<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">USUARIO:&nbsp;</strong>{{$user->email}}<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">CONTRASEÑA:&nbsp;</strong>import.1<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; font-size: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                    style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">NOTA:</strong>
+                                                                            un solo lugar!<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">USUARIO:&nbsp;</strong>{{$user->email}}<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">CONTRASEÑA:&nbsp;</strong>import.1<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span style="box-sizing: border-box; font-family: Georgia, serif; font-size: 16px; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">NOTA:</strong>
                                                                             </span>Es muy importante, que revises la
-                                                                            plataforma educativa, hemos visto<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">que
+                                                                            plataforma educativa, hemos visto<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">que
                                                                             los mejores casos de exito de nuestros
                                                                             importadores,es de aquellas
-                                                                            personas&nbsp;<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">que
+                                                                            personas&nbsp;<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">que
                                                                             ingresan a las clases y revisan la
                                                                             plataforma.&nbsp;</p>
-                                                                        <p
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            Ingresar al&nbsp;<strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">Grupo
-                                                                                de Whatsapp privado,<br
-                                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"></strong>aqui
+                                                                        <p style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            Ingresar al&nbsp;<strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">Grupo
+                                                                                de Whatsapp privado,<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"></strong>aqui
                                                                             enviremos informacion muy importante, clic
-                                                                            acá⬇⬇<br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><a
-                                                                                    id="mrD1xi4"
-                                                                                    style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                    href="https://mstr.ly/CICLO-IMPORTMAY-2024"
-                                                                                    target="_blank" rel="noopener">GRUPO
+                                                                            acá⬇⬇<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><a id="mrD1xi4" style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline" href="https://mstr.ly/CICLO-IMPORTJULIO-2024" target="_blank" rel="noopener">GRUPO
                                                                                     PRIVADO</a></strong></p>
-                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2"
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <span class="selectable-text copyable-text"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Para
-                                                                                contactarte con el&nbsp;</span><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong
-                                                                                    class="selectable-text copyable-text nbipi2bn"
-                                                                                    style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">equipo
-                                                                                    de soporte</strong></strong><span
-                                                                                class="selectable-text copyable-text"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">&nbsp;lo
+                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <span class="selectable-text copyable-text" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Para
+                                                                                contactarte con el&nbsp;</span><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><strong class="selectable-text copyable-text nbipi2bn" style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">equipo
+                                                                                    de soporte</strong></strong><span class="selectable-text copyable-text" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">&nbsp;lo
                                                                                 puedes hacer atravez de este
-                                                                                link&nbsp;⬇⬇&nbsp;<br
-                                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"></span><a
-                                                                                id="n4KkJJ5"
-                                                                                style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline"
-                                                                                href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=n4KkJJ5&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type"
-                                                                                target="_blank" rel="noopener"><strong
-                                                                                    style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                        class="selectable-text copyable-text"
-                                                                                        style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">HABLAR
+                                                                                link&nbsp;⬇⬇&nbsp;<br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0"></span><a id="n4KkJJ5" style="box-sizing: border-box; color: #15c; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; text-decoration: underline" href="https://3fz8vrwgo3.execute-api.us-west-2.amazonaws.com/track?curr_track_type=link_click&amp;link_id=n4KkJJ5&amp;temp_id=IjMwOTYyOSI_3D&amp;email_id=mailget_email_id_replace&amp;s_id=mailget_s_id_replace&amp;server=replace_smtp_server&amp;type=replace_drip_type" target="_blank" rel="noopener"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="selectable-text copyable-text" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">HABLAR
                                                                                         CON UN
-                                                                                        ASESOR</span></strong></a></p>
-                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2"
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <span class="selectable-text copyable-text"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">(Atencion
-                                                                                de Lunes a Viernes de 8:00 a.m-17:00
-                                                                                p.m) </span><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">👤</span></span>
+                                                                                        ASESOR</span></strong></a>
                                                                         </p>
-                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2"
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <br
-                                                                                style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Sabemos
-                                                                            que tu seras nuestro siguiente <strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">CASO
-                                                                                DE EXITO&nbsp;</strong><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⤵️</span></span>
+                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <span class="selectable-text copyable-text" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">(Atencion
+                                                                                de Lunes a Viernes de 8:00 a.m-17:00
+                                                                                p.m) </span><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">👤</span></span>
+                                                                        </p>
+                                                                        <p class="selectable-text copyable-text iq0m558w g0rxnol2" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <br style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Sabemos
+                                                                            que tu seras nuestro siguiente <strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0">CASO
+                                                                                DE EXITO&nbsp;</strong><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">⤵️</span></span>
                                                                         </p>
                                                                     </td>
                                                                 </tr>
-                                                                <tr
-                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                    <td class="content-block aligncenter"
-                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; text-align: center; vertical-align: top; width: 100%"
-                                                                        align="center" valign="top">
-                                                                        <div align="center"
-                                                                            style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                            <img width="560"
-                                                                                src="https://mailget.s3.amazonaws.com/upload_files/1691000274-713902983-Captura_de_pantalla_2023_08_02_a_la_s__13_13_40.png"
-                                                                                alt=""
-                                                                                style="box-sizing: border-box; display: inline-block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; padding: 0">
+                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                    <td class="content-block aligncenter" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; text-align: center; vertical-align: top; width: 100%" align="center" valign="top">
+                                                                        <div align="center" style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                            <img width="560" src="https://mailget.s3.amazonaws.com/upload_files/1691000274-713902983-Captura_de_pantalla_2023_08_02_a_la_s__13_13_40.png" alt="" style="box-sizing: border-box; display: inline-block; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; max-width: 100%; mso-line-height-rule: exactly; padding: 0">
                                                                         </div>
                                                                     </td>
                                                                 </tr>
-                                                                <tr
-                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                                    <td class="content-block"
-                                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%"
-                                                                        valign="top">
-                                                                        <p style="box-sizing: border-box; color: rgb(46, 46, 46); font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0; text-align: right"
-                                                                            align="right"><strong
-                                                                                style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><em
-                                                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Equipo
-                                                                                    Imporfactory.&nbsp;</em></strong><span
-                                                                                class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p"
-                                                                                style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                                    class="mpj7bzys xzlurrtv"
-                                                                                    style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">✍🏻</span></span>
+                                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                                    <td class="content-block" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: none no-repeat center / cover; box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 16px; height: 100%; line-height: 170%; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 20px 0; vertical-align: top; width: 100%" valign="top">
+                                                                        <p style="box-sizing: border-box; color: rgb(46, 46, 46); font-family: Georgia, serif; font-size: 16px; font-weight: 400; line-height: 170%; margin: 16px 0 0; mso-line-height-rule: exactly; padding: 0; text-align: right" align="right"><strong style="box-sizing: border-box; font-family: inherit !important; margin: 0; mso-line-height-rule: exactly; padding: 0"><em style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">Equipo
+                                                                                    Imporfactory.&nbsp;</em></strong><span class="fe5nidar khvhiq1o r5qsrrlp i5tg98hk f9ovudaz przvwfww gx1rr48f gfz4du6o r7fjleex nz2484kf svot0ezm dcnh1tix sxl192xd t3g6t33p" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span class="mpj7bzys xzlurrtv" style="box-sizing: border-box; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0">✍🏻</span></span>
                                                                         </p>
                                                                     </td>
                                                                 </tr>
@@ -2134,29 +1971,17 @@
                                                         </table>
                                                     </td>
                                                 </tr>
-                                                <tr
-                                                    style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
-                                                    <td class="aligncenter mailer-info"
-                                                        style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #F5F5F5 none no-repeat center / cover; border-top-color: #DBDADA; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; color: #575454; font-family: Georgia,Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; height: 100%; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 15px 20px 20px; text-align: center; vertical-align: top; width: 100%"
-                                                        align="center" bgcolor="#F5F5F5" valign="top">
-                                                        <h2 class="wysiwyg-text-align-center"
-                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 18px; font-weight: 700; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: center !important"
-                                                            align="center"><span
-                                                                style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span
-                                                                    style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span
-                                                                        style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span
-                                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span
-                                                                                style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit">Imporfactory</span></span></span></span></span>
+                                                <tr style="box-sizing: border-box; font-family: Georgia,Helvetica,Arial,sans-serif; margin: 0; mso-line-height-rule: exactly; padding: 0">
+                                                    <td class="aligncenter mailer-info" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #F5F5F5 none no-repeat center / cover; border-top-color: #DBDADA; border-top-style: solid; border-top-width: 1px; box-sizing: border-box; color: #575454; font-family: Georgia,Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 400; height: 100%; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding: 15px 20px 20px; text-align: center; vertical-align: top; width: 100%" align="center" bgcolor="#F5F5F5" valign="top">
+                                                        <h2 class="wysiwyg-text-align-center" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 18px; font-weight: 700; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: center !important" align="center"><span style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0"><span style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit"><span style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; margin: 0; mso-line-height-rule: exactly; padding: 0; vertical-align: inherit">Imporfactory</span></span></span></span></span>
                                                         </h2>
-                                                        <div class="wysiwyg-text-align-center"
-                                                            style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 12px; font-weight: 400; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: center !important"
-                                                            align="center">Av. Colon y Diego de Almagro-Edificio el
+                                                        <div class="wysiwyg-text-align-center" style="box-sizing: border-box; color: #2e2e2e; font-family: Georgia, serif; font-size: 12px; font-weight: 400; line-height: 1.7; margin: 0; mso-line-height-rule: exactly; padding: 0; text-align: center !important" align="center">Av. Colon y Diego de Almagro-Edificio el
                                                             Cisne</div>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        
+
                                     </div>
                                 </td>
                             </tr>
@@ -2169,8 +1994,6 @@
 
 
 </body>
-<div class="cvlwo-ext-icon-container" title="Alibaba Image Search" style="top: -999999px; left: -999999px;"><img
-        src="chrome-extension://begnkfeikebdelojdklgfkbhbeboilne/upload-icon.svg" id="cvlwo-ext-icon"><img
-        src="chrome-extension://begnkfeikebdelojdklgfkbhbeboilne/loader-icon.svg" id="cvlwo-ext-loader"></div>
+<div class="cvlwo-ext-icon-container" title="Alibaba Image Search" style="top: -999999px; left: -999999px;"><img src="chrome-extension://begnkfeikebdelojdklgfkbhbeboilne/upload-icon.svg" id="cvlwo-ext-icon"><img src="chrome-extension://begnkfeikebdelojdklgfkbhbeboilne/loader-icon.svg" id="cvlwo-ext-loader"></div>
 
 </html>
