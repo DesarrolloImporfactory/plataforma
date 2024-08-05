@@ -54,7 +54,6 @@ class StatusCourse extends Component
 
     public function stateLesson()
     {
-        echo "XD";
         if ($this->current->completed) {
             $this->current->users()->detach(auth()->user()->id);
         } else {

@@ -12,12 +12,12 @@ $nav_links = [
 ],
 [
 'name' => 'Herramientas',
-'route' => url('https://app.imporsuit.com/home'),
+'route' => url('https://herramientas.imporsuit.app'),
 'active' => '',
 ],
 [
 'name' => 'Tutoriales',
-'route' => url("https://mstr.ly/tutoriales-imporsuit"),
+'route' => url("https://danielbonilla522-9.funnels.mastertools.com/"),
 'active' => '',
 ],
 ];

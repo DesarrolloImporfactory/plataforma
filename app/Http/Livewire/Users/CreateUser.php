@@ -40,7 +40,7 @@ class CreateUser extends Component
 
     public function urlTiedaUpdated($url)
     {
-        $this->url_tienda = $url;
+        $this->url_tienda = "https://new.imporsuitpro.com";
     }
 
     public function updated($fields)
