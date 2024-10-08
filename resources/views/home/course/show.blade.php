@@ -121,7 +121,71 @@
                     @endcan
                 </div>
             </section>
-            <aside class="mt-5 hidden lg:block">
+            <aside class="mt-5 ">
+
+                @if ($curso->id == 13)
+                    <h1 class="font-bold text-gray-700 py-2  text-xl dark:text-gray-200">Recursos</h1>
+
+                    <div class="py-5 justify-center" style="display: grid; gap: 20px">
+                        <a class="card rounded-lg p-4" href="https://infoaduana.imporsuit.app/home" target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/1.png" alt="proveedores">
+
+                        </a>
+
+                        <a class="card rounded-lg p-4" href="https://imporfactoryusa.com/catalogo-de-tiendas"
+                            target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/2.png" alt="boveda">
+
+                        </a>
+
+                        {{--  <a href="#"> --}}
+
+                        <div class="card rounded-lg p-4">
+
+                            <img src="https://tiendas.imporsuitpro.com/imgs/3.png" alt="contactos">
+                        </div>
+
+                        {{--    </a> --}}
+                    </div>
+                @endif
+                @if ($curso->id == 14)
+                    <h1 class="font-bold text-gray-700 py-2  text-xl dark:text-gray-200">Recursos</h1>
+
+                    <div class="py-5 justify-center" style="display: grid; gap: 20px">
+
+                        <a href="https://imporfactoryusa.com/catalogo-de-tiendas" target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/2.png" alt="boveda">
+
+                        </a>
+                    </div>
+                @endif
+                @if ($curso->id == 12)
+                    <h1 class="font-bold text-gray-700 py-2 text-xl dark:text-gray-200">Recursos</h1>
+
+                    <div class="py-5 justify-center" style="display: grid; gap: 20px">
+                        <a class="card rounded-lg p-4" href="https://new.imporsuitpro.com/login" target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/4.png" width="330" alt="tienda">
+                        </a>
+
+                        <a class="card rounded-lg p-4"
+                            href="https://docs.google.com/spreadsheets/d/1NR1J-0cr3qyev8UuuuPc7XTTtH-Psh-89vI1GeMVRyA/edit?gid=922926829#gid=922926829"
+                            target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/5.png" width="330" alt="productos">
+                        </a>
+
+                        <a class="card rounded-lg p-4" href="https://youtu.be/gRMKyX_sS0A?si=zRZiI8U7_jhwFlRZ"
+                            target="_blank">
+                            <img src="https://tiendas.imporsuitpro.com/imgs/PROVEEDORES.png" width="330"
+                                alt="minea">
+                        </a>
+                    </div>
+                @endif
+
+                @if (count($similares) > 0)
+                    <h1 class="font-bold text-gray-700 py-5  text-xl dark:text-gray-200">Tambièn te puede interesar
+                    </h1>
+                @endif
+
                 @foreach ($similares as $similar)
                     <article class="flex mb-6">
                         <img class="h-32 w-40 object-cover" src="{{ Storage::url($similar->image->url) }}"
@@ -146,3 +210,66 @@
     </div>
 
 </x-app-layout>
+<style>
+    .whatsapp {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 40px;
+        z-index: 1000;
+    }
+
+    .whatsapp i {
+        margin-top: 10px;
+    }
+
+    /* animacion de hover */
+
+
+    .whatsapp:hover i {
+        animation: jello 1.5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes jello {
+        0% {
+            transform: scale(1, 1);
+        }
+
+        30% {
+            transform: scale(1.25, 0.75);
+        }
+
+        40% {
+            transform: scale(0.75, 1.25);
+        }
+
+        50% {
+            transform: scale(1.15, 0.85);
+        }
+
+        65% {
+            transform: scale(0.95, 1.05);
+        }
+
+        75% {
+            transform: scale(1.05, 0.95);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+</style>
+<div>
+    {{-- whatsapp walink --}}
+    <a href="https://wa.link/asyko9" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>

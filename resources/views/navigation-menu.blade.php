@@ -15,11 +15,13 @@ $nav_links = [
 'route' => url('https://herramientas.imporsuit.app'),
 'active' => '',
 ],
+
 [
-'name' => 'Tutoriales',
-'route' => url("https://danielbonilla522-9.funnels.mastertools.com/"),
-'active' => '',
-],
+    'name' => 'Comunidad',
+    'route' => url("https://importadores.club/communities/groups/club-de-importadores-/home"),
+    'active' => '',
+    ],
+   
 ];
 @endphp
 

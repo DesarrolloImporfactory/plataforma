@@ -21,21 +21,40 @@ class StatusCourse extends Component
     public function mount(Course $curso)
     {
         $this->curso = $curso;
-        foreach ($curso->lessons as $lesson) {
-            if (!$lesson->completed) {
-                $this->current = $lesson;
-                break;
+
+        // Obtener las lecciones completadas por el usuario en orden de completitud en la tabla pivote
+        $completedLessons = $curso->lessons()
+            ->join('lesson_user', 'lessons.id', '=', 'lesson_user.lesson_id')
+            ->where('lesson_user.user_id', auth()->user()->id)
+            ->orderBy('lesson_user.id', 'desc')
+            ->select('lessons.*')
+            ->get();
+
+        // Si hay lecciones completadas, tomar la última en términos de completitud
+        if ($completedLessons->isNotEmpty()) {
+            $this->current = $completedLessons->first();
+        } else {
+            // Si no hay lecciones completadas, buscar la primera no completada
+            foreach ($curso->lessons as $lesson) {
+                if (!$lesson->completed) {
+                    $this->current = $lesson;
+                    break;
+                }
+            }
+
+            // Si todas las lecciones están completadas, tomar la última
+            if (!$this->current) {
+                $this->current = $curso->lessons->last();
             }
         }
 
-        if (!$this->current) {
-            $this->current = $curso->lessons->last();
-        }
-
+        // Verificar si el usuario está inscrito en el curso
         if (!$curso->students->contains(auth()->user()->id)) {
             $curso->students()->attach(auth()->user()->id);
         }
     }
+
+
 
     public function render()
     {
