@@ -15,6 +15,9 @@ use App\Http\Livewire\Vendedor\AdminVendedores;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/newlogin', function () {
+    return view('newlogin');
+});
 
 Route::middleware(['can:Admin sistem'])->group(function () {
     Route::get('roles/index', AdminRoles::class)->name('admin.roles.index')->middleware('can:Admin roles');
@@ -28,5 +31,5 @@ Route::middleware(['can:Admin sistem'])->group(function () {
     Route::get('setings', [HomeController::class, 'setings'])->name('admin.setings')->middleware('can:Admin cursos');
     Route::get('vendedores/all', AdminVendedores::class)->name('admin.vendedores.all')->middleware('can:Admin vendedores');
     Route::get('alumnos/all', AdminAlumnos::class)->name('admin.alumnos.all')->middleware('can:Gestionar alumnos');
-    Route::resource('import',ImportController::class)->names('import');
+    Route::resource('import', ImportController::class)->names('import');
 });

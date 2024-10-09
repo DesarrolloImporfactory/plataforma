@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\Permission\Models\Role;
 
+
+
+Route::group(['middleware' => ['auth.jwt']], function () {
+    Route::get('/newlogin', function () {
+        return  "newlogin";
+    })->name('newlogin');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -29,7 +37,6 @@ Route::middleware([
     Route::get('/cursos/view/{curso}', StatusCourse::class)->name('cursos.view');
 
     Route::get('/vendedor', DashboardVendedor::class)->name('vendedor')->middleware('can:Dashboard vendedor');
-
 });
 
 Route::get('admin/redirect/{id}', [RedirectController::class, 'redirectUser'])->name('admin.redirect');
