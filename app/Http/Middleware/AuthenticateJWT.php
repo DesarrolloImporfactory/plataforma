@@ -11,14 +11,12 @@ class AuthenticateJWT
 {
     public function handle($request, Closure $next)
     {
-        dd($request);
+
         try {
-            // Verificar si el token está en la cookie o en los headers
-            $token = $request->cookie('token') ?? $request->header('Authorization');
-            $token = str_replace('Bearer ', '', $token); // Eliminar el prefijo Bearer
+            // Obtener el token JWT del enlace 
+            $token = $_GET['token'];
 
-
-            // Decodificar el token para obtener los datos del usuario
+            // Verificar si el token es válido
             $payload = JWTAuth::setToken($token)->getPayload();
 
             // Obtener el correo electrónico del payload del token
